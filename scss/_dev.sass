@@ -1,0 +1,67 @@
+.devtool 
+	background: #dfdfdf
+	padding: 2rem 
+	position: fixed 
+	right: -300px
+	width: 300px
+	top: 2rem
+	z-index: 100000
+	transition: .5s ease-in-out all 
+	&.active 
+		transform: translateX(-300px)
+	.hey
+		height: 60px
+		width: 60px 
+		display: flex
+		align-items: center
+		justify-content: center
+		cursor: pointer
+		position: absolute
+		right: 100%
+		top: 0
+		background-color: $primary 
+		i 
+			color: white 
+			font-size: 2rem 
+	ul 
+		list-style-type: none 
+		margin: 0 
+		padding: 0 
+		li    
+			a 
+				display: block 
+				color: $primary 
+				margin: .5rem 0
+
+#giaidacbiet, #giainhat, #giainhi
+	.boxkienlong 
+		margin-bottom: 0 
+		padding: .5rem
+	#lists 
+		-webkit-box-pack: justify
+		-ms-flex-pack: justify
+		-webkit-justify-content: space-between
+		-moz-justify-content: space-between
+		justify-content: space-between
+		max-width: 700px
+		margin: 0 auto
+		.lists
+			background: $primary 
+			border-radius: 0 
+			min-width: calc((100% - 6rem) / 6)
+			box-shadow: none 
+			min-height: 100px
+			max-height: 100px
+			&:first-child 
+				border-radius: 20px 0 0 0
+			&:last-child 
+				border-radius: 0 0 20px 0
+			&:before, &:after 
+				content: none 
+			.item 
+				color: white 
+				min-width: initial 
+				min-height: calc(100px - 1rem)
+				max-height: calc(100px - 1rem)
+				padding: .25rem
+				font-size: 5rem

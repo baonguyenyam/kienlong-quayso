@@ -1,0 +1,13 @@
+{
+    "data_giaidacbiet": {
+    "lists": ["BD3PGL;BD3PGL;NGUYEN VAN THOI;PHẠM NGUYỄN BẢO NGUYÊN;MSDT: BD3PGL;KIEN LONG BANK GO CONG;KIENLONG BANK DA NANG"],
+    "settings": ["key,name,address,mobile"],
+    "ltr": false,
+    "bgimg": "./img/bg-giainhat.jpg",
+    "imgs": "",
+    "press": 3,
+    "autostop": false,
+    "autotime": 6000,
+    "demo": false
+    }
+}

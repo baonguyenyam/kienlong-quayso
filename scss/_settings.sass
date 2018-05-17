@@ -1,0 +1,257 @@
+$blue: #265c6c;
+$bg-light: #ced4dc;
+$bg-med: #ced4dc;
+
+#settings
+	overflow: hidden
+	*
+		border-radius: 0px
+	div.checkbox.switcher, div.radio.switcher
+		margin-bottom: .25rem 
+		label
+			padding: 0
+			*
+				vertical-align: middle
+			input
+				display: none
+				&+span
+					position: relative
+					display: inline-block
+					margin-right: 10px
+					width: 56px
+					height: 28px
+					background: $bg-light
+					border: 1px solid $bg-med
+					border-radius: 50px
+					transition: all 0.3s ease-in-out
+					small
+						position: absolute
+						display: block
+						width: 50%
+						height: 100%
+						background: #fff
+						border-radius: 50%
+						transition: all 0.3s ease-in-out
+						left: 0
+				&:checked+span
+					background: $blue
+					border-color: $blue
+					small
+						left: 50%
+	#loading
+		background: rgba(255,255,255,1)
+		display: flex
+		justify-content: center 
+		align-items: center
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 99999
+		transition: all 1s ease-in
+		opacity: 1
+		&.done 
+			z-index: -1
+			opacity: 0
+		&.finished
+			z-index: -1
+			opacity: 1
+	.btn-sm
+		padding: .5rem 1rem !important
+		font-size: 1rem
+	.setmain
+		margin: 1rem auto 
+		height: calc(100% - 2rem)
+		display: flex
+		flex-direction: column
+		align-items: center
+		max-width: 1400px
+		width: 100%
+		.innerbox
+			border: 1px solid #265c6c
+			width: 100%
+			background: #265c6c
+	.activebox
+		position: relative
+		&:after
+			content: ""
+			// border: 1px dashed #ea3f33
+			display: block
+			position: absolute
+			width: calc(100% + 1rem)
+			height: calc(100% + 1rem)
+			left: -.5rem
+			top: -.5rem
+			background: linear-gradient(90deg, red 50%, transparent 50%), linear-gradient(90deg, red 50%, transparent 50%), linear-gradient(0deg, red 50%, transparent 50%), linear-gradient(0deg, red 50%, transparent 50%)
+			background-repeat: repeat-x, repeat-x, repeat-y, repeat-y
+			background-size: 8px 1px, 8px 1px, 1px 8px, 1px 8px
+			background-position: 0px 0px, 100% 100%, 0px 100%, 100% 0px
+			animation: animateBorder 4s infinite linear
+	.activebox-lagre
+		position: relative
+		&:after
+			content: ""
+			// border: 1px dashed #ea3f33
+			display: block
+			position: absolute
+			width: calc(100% + 1rem)
+			height: calc(100% + 1rem)
+			left: -.5rem
+			top: -.5rem
+			background: linear-gradient(90deg, red 50%, transparent 50%), linear-gradient(90deg, red 50%, transparent 50%), linear-gradient(0deg, red 50%, transparent 50%), linear-gradient(0deg, red 50%, transparent 50%)
+			background-repeat: repeat-x, repeat-x, repeat-y, repeat-y
+			background-size: 8px 1px, 8px 1px, 1px 8px, 1px 8px
+			background-position: 0px 0px, 100% 100%, 0px 100%, 100% 0px
+			animation: animateBorder 8s infinite linear
+	.activebox-board
+		position: relative
+		&:after
+			content: ""
+			display: block
+			position: absolute
+			width: calc(100% - 1rem)
+			height: calc(100% - 1rem)
+			left: .5rem
+			top: .5rem
+			background: linear-gradient(90deg, red 50%, transparent 50%), linear-gradient(90deg, red 50%, transparent 50%), linear-gradient(0deg, red 50%, transparent 50%), linear-gradient(0deg, red 50%, transparent 50%)
+			background-repeat: repeat-x, repeat-x, repeat-y, repeat-y
+			background-size: 8px 1px, 8px 1px, 1px 8px, 1px 8px
+			background-position: 0px 0px, 100% 100%, 0px 100%, 100% 0px
+			animation: animateBorder 12s infinite linear
+	#board
+		position: relative
+		.boxquayso
+			border: 3px solid transparent
+			padding: 1rem
+			display: flex
+			justify-content: space-between
+			position: absolute
+			.text
+				padding: .5rem 1rem
+				font-size: 2rem 
+				font-weight: bold
+		.btnquayso
+			position: absolute
+			padding: .75rem 1.3rem
+			font-size: 1.5rem 
+			line-height: 1.5rem 
+			span
+				display: block
+			img 
+				display: none
+			&.active
+				background: none !important 
+				padding: 0 !important 
+				border: 0 !important 
+				img 
+					display: block
+				span
+					display: none
+		.ketqua
+			position: absolute
+			font-weight: bold
+			text-transform: uppercase
+		.hinhanh
+			position: absolute
+			width: 240px
+			height: 300px
+			img 
+				max-width: 100%
+		.khuyenkhich
+			position: absolute
+			border: 3px solid transparent
+			padding: 1rem
+			display: flex
+			flex-direction: row
+			flex-wrap: wrap
+			.text 
+				flex: 0 0 100%
+				max-width: 100%
+				padding: .5rem 
+
+			&[columns="2"]
+				.text 
+					flex: 0 0 50%
+					max-width: 50%
+			&[columns="3"]
+				.text 
+					flex: 0 0 33.333333%
+					max-width: 33.333333%
+			&[columns="4"]
+				.text 
+					flex: 0 0 25%
+					max-width: 25%
+			&[columns="5"]
+				.text 
+					flex: 0 0 20%
+					max-width: 20%
+			&[columns="6"]
+				.text 
+					flex: 0 0 16.66666%
+					max-width: 16.66666%
+		.tableres
+			position: absolute
+			left: 0
+			width: 100%
+			padding: 0 2rem
+			.table 
+				border: 1px solid transparent
+
+	#menu
+		background: #265c6c
+		.no-gutters
+			margin-right: -.15rem
+			margin-left: -.15rem
+			> .col, 
+			> [class*=col-]
+				padding-left: .15rem
+				padding-right: .15rem 
+		.card 
+			height: 100%
+			border: 0
+			.card-header
+				background: #255c6d
+				color: white 
+				font-size: .9rem
+				padding: 0
+				&.active 
+					background: #fff842
+					a 
+						color: #000 
+				a 
+					color: #fff 
+					display: block
+					padding: .5rem .5rem 
+					text-decoration: none
+					font-size: .9rem
+			.card-body
+				padding: 0 .25rem
+				label, .input-group-text
+					margin-bottom: 0
+					font-size: .8rem
+				.form-group, .input-group
+					margin-bottom: .25rem 
+				.btn 
+					border: 1px solid #ced4db
+					background: #ced4db
+					color: #000
+					&:hover , &:active, &:focus 
+						background: #ced4db!important
+						border: 1px solid #ced4db!important
+		.colorpicker-element .add-on i, 
+		.colorpicker-element .input-group-addon i
+			display: flex
+			height: 100%
+			width: 2rem
+			border: 1px solid #dfdfdf
+
+@keyframes animateBorder
+	0%
+		background-position: 0px 0px, 100% 100%, 0px 100%, 100% 0px
+	10%, 30%, 50%, 70%, 90%
+		background-image: linear-gradient(90deg, yellow 50%, transparent 50%), linear-gradient(90deg, yellow 50%, transparent 50%), linear-gradient(0deg, yellow 50%, transparent 50%), linear-gradient(0deg, yellow 50%, transparent 50%)
+	20%, 40%, 60%, 80%, 100%
+		background-image: linear-gradient(90deg, red 50%, transparent 50%), linear-gradient(90deg, red 50%, transparent 50%), linear-gradient(0deg, red 50%, transparent 50%), linear-gradient(0deg, red 50%, transparent 50%)
+	100%
+		background-position: 100% 0px, 0px 100%, 0px 0px, 100% 100%

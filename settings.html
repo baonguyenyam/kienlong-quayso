@@ -1,0 +1,682 @@
+<!-- 
+Coding by: Bao Nguyen
+Tel: 0.96.96.89.89.3
+Tel: 0.933.112.900
+Email: baonguyenyam@gmail.com
+URL: fb.com/pham.nguyen.bao.nguyen
+baonguyenyam.github.io
+baonguyenyam.blogspot.com
+-->
+<!DOCTYPE html>
+<html class="no-js" dir="ltr" lang="en" itemscope itemtype="http://schema.org/WebSite" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="author" content="baonguyenyam@gmail.com - 0 9696 8989 3 - 0933 112 900">
+  <meta name="language" content="Vietnam">
+  <meta name="copyright" content="Bao Nguyen">
+  <meta name="designer" content="Bao Nguyen">
+  <meta name="publisher" content="Bao Nguyen">
+  <meta name="distribution" content="Global">
+  <meta name="robots" content="INDEX,FOLLOW">
+  <meta name="country" content="Vietnam">
+  <!-- Social: Favicon-->
+  <meta name="theme-color" content="#9a479a">
+  <meta name="msapplication-navbutton-color" content="#9a479a">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#9a479a">
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Kien Long Bank</title>
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="vendor/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-colorpicker.min.css" rel="stylesheet">
+  <link href="css/creative.min.css" rel="stylesheet">
+</head>
+
+<body id="settings">
+  <div id="loading">Loading...</div>
+  <div class="setmain">
+    <div class="row">
+      <div class="col text-center mb-3">
+        <h1 class="h3 text-danger">Tùy chỉnh giao diện quay số Kiên Long</h1>
+        <div class="form-inline justify-content-center">
+          <div class="form-group mb-2">
+            <label>Màn hình:</label>
+          </div>
+          <div class="form-group mx-sm-3 mb-2">
+            <select id="pageChange" class="custom-select form-control-sm">
+              <option value="giaidacbiet">Giải đặc biệt</option>
+              <option value="giainhat">Giải nhất</option>
+              <option value="giainhi">Giải nhì</option>
+              <option value="giaikhuyenkhich">Giải khuyến khích</option>
+            </select>
+          </div>
+        </div>
+        <p class="small mb-0 text-muted">Phiên bản 1.0.6 by Cánh Cam</p>
+      </div>
+    </div>
+    <div class="innerbox">
+      <div class="row no-gutters">
+        <div class="col-9" id="tempboard">
+          <div data-set-height data-set-width class="d-none"></div>
+          <div id="board" class="board">
+            <div class="boxquayso" data-set-boxBorder data-set-boxBg data-set-boxX data-set-boxY>
+              <div class="text" data-set-boxNumBg data-set-boxNumColor>1</div>
+              <div class="text" data-set-boxNumBg data-set-boxNumColor>2</div>
+              <div class="text" data-set-boxNumBg data-set-boxNumColor>3</div>
+              <div class="text" data-set-boxNumBg data-set-boxNumColor>4</div>
+              <div class="text" data-set-boxNumBg data-set-boxNumColor>5</div>
+              <div class="text" data-set-boxNumBg data-set-boxNumColor>6</div>
+            </div>
+            <button type="button" class="btn btn-primary btnquayso" data-set-btnQuaySoX data-set-btnQuaySoY> <span>Quay số</span>
+              <img src="" alt="">
+            </button>
+            <div class="ketqua" data-set-ketquaX data-set-ketquaY data-set-textAlign data-set-fontSize data-set-lineHeight>
+              <div class="chucmung" data-set-textChucMung>Xin chúc mừng khách hàng</div>
+              <div class="ten" data-set-textTen>Phạm Nguyễn Bảo Nguyên</div>
+              <div class="msdt" data-set-textMSDT>MSDT: 0969689893</div>
+              <div class="donvi" data-set-textDonVi>KienLong Bank Gò Công</div>
+            </div>
+            <div class="hinhanh" data-set-anhX data-set-anhY>
+              <img src="" alt="">
+            </div>
+            <div class="khuyenkhich d-none" data-set-khuyenkhichWidth data-set-boxBorder data-set-boxBg data-set-khuyenkhichX data-set-khuyenkhichY data-set-khuyenkhichColumns>
+              <div class="text" data-set-boxNumBg>
+                <div class="name" data-set-khuyenkhichChucMung>Bảo Nguyên</div>
+                <div class="msdt" data-set-khuyenkhichMS>MSDT: 12345</div>
+                <div class="donvi" data-set-khuyenkhichDonVi>Kien Long HCM</div>
+              </div>
+              <div class="text" data-set-boxNumBg>
+                <div class="name" data-set-khuyenkhichChucMung>Bảo Nguyên</div>
+                <div class="msdt" data-set-khuyenkhichMS>MSDT: 12345</div>
+                <div class="donvi" data-set-khuyenkhichDonVi>Kien Long HCM</div>
+              </div>
+              <div class="text" data-set-boxNumBg>
+                <div class="name" data-set-khuyenkhichChucMung>Bảo Nguyên</div>
+                <div class="msdt" data-set-khuyenkhichMS>MSDT: 12345</div>
+                <div class="donvi" data-set-khuyenkhichDonVi>Kien Long HCM</div>
+              </div>
+              <div class="text" data-set-boxNumBg>
+                <div class="name" data-set-khuyenkhichChucMung>Bảo Nguyên</div>
+                <div class="msdt" data-set-khuyenkhichMS>MSDT: 12345</div>
+                <div class="donvi" data-set-khuyenkhichDonVi>Kien Long HCM</div>
+              </div>
+              <div class="text" data-set-boxNumBg>
+                <div class="name" data-set-khuyenkhichChucMung>Bảo Nguyên</div>
+                <div class="msdt" data-set-khuyenkhichMS>MSDT: 12345</div>
+                <div class="donvi" data-set-khuyenkhichDonVi>Kien Long HCM</div>
+              </div>
+              <div class="text" data-set-boxNumBg>
+                <div class="name" data-set-khuyenkhichChucMung>Bảo Nguyên</div>
+                <div class="msdt" data-set-khuyenkhichMS>MSDT: 12345</div>
+                <div class="donvi" data-set-khuyenkhichDonVi>Kien Long HCM</div>
+              </div>
+            </div>
+            <div class="tableres d-none" data-set-boxY>
+              <table class="table table-sm" data-set-tblBorder>
+                <thead>
+                  <tr>
+                    <th data-set-tblBorder data-set-tblHeadBg data-set-tblHeadCo>#</th>
+                    <th data-set-tblBorder data-set-tblHeadBg data-set-tblHeadCo>First</th>
+                    <th data-set-tblBorder data-set-tblHeadBg data-set-tblHeadCo>Last</th>
+                    <th data-set-tblBorder data-set-tblHeadBg data-set-tblHeadCo>Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-set-tblBorder data-set-tblBgOdd data-set-tblCoOdd>1</td>
+                    <td data-set-tblBorder data-set-tblBgOdd data-set-tblCoOdd>Mark</td>
+                    <td data-set-tblBorder data-set-tblBgOdd data-set-tblCoOdd>Otto</td>
+                    <td data-set-tblBorder data-set-tblBgOdd data-set-tblCoOdd>@mdo</td>
+                  </tr>
+                  <tr>
+                    <td data-set-tblBorder data-set-tblBgEven data-set-tblCoEven>1</td>
+                    <td data-set-tblBorder data-set-tblBgEven data-set-tblCoEven>Mark</td>
+                    <td data-set-tblBorder data-set-tblBgEven data-set-tblCoEven>Otto</td>
+                    <td data-set-tblBorder data-set-tblBgEven data-set-tblCoEven>@mdo</td>
+                  </tr>
+                  <tr>
+                    <td data-set-tblBorder data-set-tblBgOdd data-set-tblCoOdd>1</td>
+                    <td data-set-tblBorder data-set-tblBgOdd data-set-tblCoOdd>Mark</td>
+                    <td data-set-tblBorder data-set-tblBgOdd data-set-tblCoOdd>Otto</td>
+                    <td data-set-tblBorder data-set-tblBgOdd data-set-tblCoOdd>@mdo</td>
+                  </tr>
+                  <tr>
+                    <td data-set-tblBorder data-set-tblBgEven data-set-tblCoEven>1</td>
+                    <td data-set-tblBorder data-set-tblBgEven data-set-tblCoEven>Mark</td>
+                    <td data-set-tblBorder data-set-tblBgEven data-set-tblCoEven>Otto</td>
+                    <td data-set-tblBorder data-set-tblBgEven data-set-tblCoEven>@mdo</td>
+                  </tr>
+                  <tr>
+                    <td data-set-tblBorder data-set-tblBgOdd data-set-tblCoOdd>1</td>
+                    <td data-set-tblBorder data-set-tblBgOdd data-set-tblCoOdd>Mark</td>
+                    <td data-set-tblBorder data-set-tblBgOdd data-set-tblCoOdd>Otto</td>
+                    <td data-set-tblBorder data-set-tblBgOdd data-set-tblCoOdd>@mdo</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-3" id="menu">
+
+
+          <div class="accordion" id="accordion">
+
+            <div class="card">
+              <div class="card-header active" id="set-0">
+                <h5 class="mb-0">
+									<a data-toggle="collapse" href="#getSet-0" aria-expanded="false" aria-controls="getSet-0">
+										Chào mừng!
+
+									</a>
+								</h5>
+              </div>
+
+              <div id="getSet-0" class="collapse" aria-labelledby="set-0" data-parent="#accordion">
+                <div class="card-body bg-light small p-2">
+                  <p>Đây là màn hình tùy chỉnh giao diện quay số Kiên Long được thiết kế bởi Cánh Cam, Bên trái là mô phỏng màn hình khi diễn thực tế, kích thước chuẩn mặc định là 1366 x 768px. Kích thước sử dụng là tỷ lệ %.</p>
+                  <p class="mb-0">
+                    <strong>Lưu ý:</strong> Sau khi tiến hành lưu lại bạn nên test thực tế để xác nhận thay đổi, do đây là mô phỏng nên tỷ lệ có thể sai lệch một chút so với thực tế.</p>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="card">
+              <div class="card-header" id="set-1" data-activebox=".board" data-activebox-class="activebox-board">
+                <h5 class="mb-0">
+									<a data-toggle="collapse" href="#getSet-1" aria-expanded="false" aria-controls="getSet-1">
+										Kích thước màn ảnh
+
+									</a>
+								</h5>
+              </div>
+
+              <div id="getSet-1" class="collapse" aria-labelledby="set-1" data-parent="#accordion">
+                <div class="card-body">
+
+                  <div class="row no-gutters">
+                    <div class="col">
+                      <label>Chiều rộng</label>
+                      <div class="input-group input-group-sm">
+                        <input id="width" data-change="width" type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <label>Chiều cao</label>
+                      <div class="input-group input-group-sm">
+                        <input id="height" data-change="height" type="number" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="set-2" data-activebox=".boxquayso, .khuyenkhich" data-activebox-class="activebox">
+                <h5 class="mb-0">
+									<a data-toggle="collapse" href="#getSet-2" aria-expanded="false" aria-controls="getSet-2">
+										Khung quay số
+									</a>
+								</h5>
+              </div>
+
+              <div id="getSet-2" class="collapse" aria-labelledby="set-2" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="row no-gutters">
+                    <div class="col">
+                      <label>Căn trên</label>
+                      <div class="input-group input-group-sm">
+                        <input id="boxY" data-change="top" type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <label>Căn trái</label>
+                      <div class="input-group input-group-sm">
+                        <input id="boxX" data-change="left" type="number" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input-group input-group-sm colorpicker-component cppicker">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Viền khung</span>
+                      </div>
+                      <input id="boxBorder" data-change="border-color" type="text" class="form-control" value="">
+                      <span class="input-group-addon">
+												<i></i>
+											</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group input-group-sm colorpicker-component cppicker">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Nền khung</span>
+                      </div>
+                      <input id="boxBg" data-change="background-color" type="text" class="form-control" value="">
+                      <span class="input-group-addon">
+												<i></i>
+											</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group input-group-sm colorpicker-component cppicker">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Màu nền slot</span>
+                      </div>
+                      <input id="boxNumBg" data-change="background-color" type="text" class="form-control" value="">
+                      <span class="input-group-addon">
+												<i></i>
+											</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group input-group-sm colorpicker-component cppicker">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Màu chữ slot</span>
+                      </div>
+                      <input id="boxNumColor" data-change="color" type="text" class="form-control" value="">
+                      <span class="input-group-addon">
+												<i></i>
+											</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div class="card-header" id="set-7" data-activebox=".khuyenkhich" data-activebox-class="activebox-lagre">
+                <h5 class="mb-0">
+									<a data-toggle="collapse" href="#getSet-7" aria-expanded="true" aria-controls="getSet-7">
+										Nội dung khung quay số
+									</a>
+								</h5>
+              </div>
+
+              <div id="getSet-7" class="collapse" aria-labelledby="set-7" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="row no-gutters">
+                    <div class="col">
+                      <label>Căn trên</label>
+                      <div class="input-group input-group-sm">
+                        <input id="khuyenkhichY" data-change="top" type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <label>Căn trái</label>
+                      <div class="input-group input-group-sm">
+                        <input id="khuyenkhichX" data-change="left" type="number" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row no-gutters">
+                    <div class="col">
+                      <label>Số Cột</label>
+                      <div class="input-group input-group-sm">
+                        <input id="khuyenkhichColumns" data-change="columns" type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <label>Độ rộng</label>
+                      <div class="input-group input-group-sm">
+                        <input id="khuyenkhichWidth" data-change="width" type="number" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input-group input-group-sm colorpicker-component cppicker">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Họ Tên</span>
+                      </div>
+                      <input id="khuyenkhichChucMung" data-change="color" type="text" class="form-control" value="">
+                      <span class="input-group-addon">
+												<i></i>
+											</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group input-group-sm colorpicker-component cppicker">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">MSDT</span>
+                      </div>
+                      <input id="khuyenkhichMS" data-change="color" type="text" class="form-control" value="">
+                      <span class="input-group-addon">
+												<i></i>
+											</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group input-group-sm colorpicker-component cppicker">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Đơn Vị</span>
+                      </div>
+                      <input id="khuyenkhichDonVi" data-change="color" type="text" class="form-control" value="">
+                      <span class="input-group-addon">
+												<i></i>
+											</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div class="card-header" id="set-3" data-activebox=".btnquayso" data-activebox-class="activebox">
+                <h5 class="mb-0">
+									<a data-toggle="collapse" href="#getSet-3" aria-expanded="false" aria-controls="getSet-3">
+										Nút quay số
+									</a>
+								</h5>
+              </div>
+
+              <div id="getSet-3" class="collapse" aria-labelledby="set-3" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="row no-gutters">
+                    <div class="col">
+                      <label>Căn trên</label>
+                      <div class="input-group input-group-sm">
+                        <input id="btnQuaySoY" data-change="top" type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <label>Căn trái</label>
+                      <div class="input-group input-group-sm">
+                        <input id="btnQuaySoX" data-change="left" type="number" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row no-gutters">
+                    <div class="col">
+                      <label>Sử dụng ảnh</label>
+                      <div class="checkbox switcher">
+                        <label for="btnImage">
+                          <input type="checkbox" id="btnImage">
+                          <span>
+														<small></small>
+													</span>
+                          <!-- <small>Light switch</small> -->
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div class="card-header" id="set-4" data-activebox=".ketqua" data-activebox-class="activebox">
+                <h5 class="mb-0">
+									<a data-toggle="collapse" href="#getSet-4" aria-expanded="false" aria-controls="getSet-4">
+										Kết quả
+									</a>
+								</h5>
+              </div>
+
+              <div id="getSet-4" class="collapse" aria-labelledby="set-4" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="row no-gutters">
+                    <div class="col">
+                      <label>Căn trên</label>
+                      <div class="input-group input-group-sm">
+                        <input id="ketquaY" data-change="top" type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <label>Căn trái</label>
+                      <div class="input-group input-group-sm">
+                        <input id="ketquaX" data-change="left" type="number" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row no-gutters">
+                    <div class="col">
+                      <label>Cỡ chữ</label>
+                      <div class="input-group input-group-sm">
+                        <input id="fontSize" data-change="font-size" type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <label>Độ cao chữ</label>
+                      <div class="input-group input-group-sm">
+                        <input id="lineHeight" data-change="line-height" type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <label>Lề chữ</label>
+                      <select id="textAlign" data-change="text-align" class="custom-select form-control-sm">
+                        <option value="left">Trái</option>
+                        <option value="center">Giữa</option>
+                        <option value="right">Phải</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group input-group-sm colorpicker-component cppicker">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">CHÚC MỪNG</span>
+                      </div>
+                      <input id="textChucMung" data-change="color" type="text" class="form-control" value="">
+                      <span class="input-group-addon">
+												<i></i>
+											</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group input-group-sm colorpicker-component cppicker">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">TÊN</span>
+                      </div>
+                      <input id="textTen" data-change="color" type="text" class="form-control" value="">
+                      <span class="input-group-addon">
+												<i></i>
+											</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group input-group-sm colorpicker-component cppicker">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">MSDT</span>
+                      </div>
+                      <input id="textMSDT" data-change="color" type="text" class="form-control" value="">
+                      <span class="input-group-addon">
+												<i></i>
+											</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group input-group-sm colorpicker-component cppicker">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">ĐƠN VỊ</span>
+                      </div>
+                      <input id="textDonVi" data-change="color" type="text" class="form-control" value="">
+                      <span class="input-group-addon">
+												<i></i>
+											</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div class="card-header" id="set-5" data-activebox=".hinhanh" data-activebox-class="activebox">
+                <h5 class="mb-0">
+									<a data-toggle="collapse" href="#getSet-5" aria-expanded="true" aria-controls="getSet-5">
+										Ảnh trúng thường
+									</a>
+								</h5>
+              </div>
+
+              <div id="getSet-5" class="collapse" aria-labelledby="set-5" data-parent="#accordion">
+                <div class="card-body">
+
+                  <div class="row no-gutters">
+                    <div class="col">
+                      <label>Căn trên</label>
+                      <div class="input-group input-group-sm">
+                        <input id="anhY" data-change="top" type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <label>Căn trái</label>
+                      <div class="input-group input-group-sm">
+                        <input id="anhX" data-change="left" type="number" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="card">
+              <div class="card-header" id="set-6" data-activebox=".table" data-activebox-class="activebox-lagre">
+                <h5 class="mb-0">
+									<a data-toggle="collapse" href="#getSet-6" aria-expanded="true" aria-controls="getSet-6">
+										Tùy chỉnh bảng kết quả
+									</a>
+								</h5>
+              </div>
+
+              <div id="getSet-6" class="collapse" aria-labelledby="set-6" data-parent="#accordion">
+                <div class="card-body">
+
+                  <div class="form-group mt-1">
+                    <div class="input-group input-group-sm colorpicker-component cppicker">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Đường viền</span>
+                      </div>
+                      <input id="tblBorder" data-change="border-color" type="text" class="form-control" value="">
+                      <span class="input-group-addon">
+												<i></i>
+											</span>
+                    </div>
+                  </div>
+                  <div class="form-group mt-1">
+                    <div class="input-group input-group-sm colorpicker-component cppicker">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Màu nền header</span>
+                      </div>
+                      <input id="tblHeadBg" data-change="background-color" type="text" class="form-control" value="">
+                      <span class="input-group-addon">
+												<i></i>
+											</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group input-group-sm colorpicker-component cppicker">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Màu chữ header</span>
+                      </div>
+                      <input id="tblHeadCo" data-change="color" type="text" class="form-control" value="">
+                      <span class="input-group-addon">
+												<i></i>
+											</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group input-group-sm colorpicker-component cppicker">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Màu nền hàng lẻ</span>
+                      </div>
+                      <input id="tblBgOdd" data-change="background-color" type="text" class="form-control" value="">
+                      <span class="input-group-addon">
+												<i></i>
+											</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group input-group-sm colorpicker-component cppicker">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Màu chữ hàng lẻ</span>
+                      </div>
+                      <input id="tblCoOdd" data-change="color" type="text" class="form-control" value="">
+                      <span class="input-group-addon">
+												<i></i>
+											</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group input-group-sm colorpicker-component cppicker">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Màu nền hàng chẵn</span>
+                      </div>
+                      <input id="tblBgEven" data-change="background-color" type="text" class="form-control" value="">
+                      <span class="input-group-addon">
+												<i></i>
+											</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group input-group-sm colorpicker-component cppicker">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Màu chữ hàng chẵn</span>
+                      </div>
+                      <input id="tblCoEven" data-change="color" type="text" class="form-control" value="">
+                      <span class="input-group-addon">
+												<i></i>
+											</span>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="p-3 text-center">
+              <button class="btn btn-default btn-sm" type="button" onclick="saveDataToServer()">Lưu lại</button>
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="js/app.min.js"></script>
+  <script src="js/canhcam.min.js"></script>
+  <script src="vendor/jquery.bootstrap-touchspin.min.js"></script>
+  <script src="vendor/bootstrap-colorpicker.min.js"></script>
+  <script src="js/settings.min.js"></script>
+</body>
+
+</html>

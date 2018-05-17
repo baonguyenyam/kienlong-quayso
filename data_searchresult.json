@@ -1,0 +1,14 @@
+{
+    "data_searchresult": {
+    "lists": [
+        "00000001;Nguyen Van A;78678;211A Ngo Tung Chau",
+        "00000002;Nguyen tran  A;67567;211A Ngo Tung Chau",
+        "00000003;Tran thi B;678768678;211A Ngo Tung Chau",
+        "00000001;Nguyen Van A;78678;211A Ngo Tung Chau",
+        "00000002;Nguyen tran  A;67567;211A Ngo Tung Chau",
+        "00000003;Tran thi B;678768678;211A Ngo Tung Chau",
+        "00000004;Nguyen Van A;78678;211A Ngo Tung Chau"
+    ],
+    "settings": ["key,name,address,mobile"]
+    }
+}

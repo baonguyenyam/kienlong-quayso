@@ -1,0 +1,55 @@
+=placeholder()
+	&::-webkit-input-placeholder
+		@content
+	&:-moz-placeholder
+		@content
+	&::-moz-placeholder
+		@content
+	&:-ms-input-placeholder
+		@content
+
+#kiemtra
+	// background: url(../img/bg-1.jpg) center center no-repeat
+	background-size: cover
+	background-attachment: fixed
+	.wheels
+		box-shadow: 1px 1px 5px rgba(0,0,0,.5)
+		border-radius: 20px 0 20px 0
+		overflow: hidden
+		background: white
+		padding: 1rem
+		display: block
+		position: relative
+		&.showlist
+			background: lighten($primary,30%)
+			border-radius: 30px 0 30px 0
+			border: 3px solid rgb(255, 248, 66)
+			box-shadow: 0 0 20px rgba(0,0,0,.5)
+		#wheels
+			overflow: hidden
+			width: 100%
+			background: $primary
+			border-radius: 20px 0 20px 0
+			.boxnonehome 
+				display: flex
+				flex-direction: column
+				width: 100%
+				align-items: center
+				justify-content: center
+				height: 100%
+				padding: 2rem 1rem
+				input 
+					width: 100%
+					background: none
+					border: 0
+					color: #fff
+					font-size: 2rem
+					line-height: 2.5rem
+					text-align: center
+					&:focus 
+						outline: none
+					+placeholder()
+						color: #dfdfdf  
+	.boxnone
+		display: none 
+	

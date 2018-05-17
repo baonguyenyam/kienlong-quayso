@@ -1,0 +1,70 @@
+#giainhat
+	// background: url(../img/bg-1.jpg) center center no-repeat
+	background-size: cover
+	background-attachment: fixed
+	
+
+	#lists 
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: center
+		.lists
+			display: block
+			text-transform: uppercase
+			overflow: hidden
+			margin: .5rem
+			padding: .5rem 0
+			max-height: 200px
+			min-height: 200px
+			border-radius: 20px 0 20px 0
+			background: white
+			box-shadow: 1px 1px 5px rgba(0,0,0,.5)
+			position: relative
+			.block 
+				&.animated
+					animation: 1s infinite linear AnimRoll1
+			&:before 
+				content: ''
+				display: block 
+				box-shadow: 0 12px 10px rgba(255, 255, 255, .8) inset
+				position: absolute
+				top: -3px
+				left: 0
+				height: 20px
+				width: 100%
+				z-index: 10
+			&:after 
+				content: ''
+				display: block 
+				box-shadow: 0 -12px 10px rgba(255, 255, 255, .8) inset
+				position: absolute
+				bottom: -3px
+				left: 0
+				height: 20px
+				width: 100%
+				z-index: 10
+			.item 
+				overflow: hidden
+				padding: 1rem 2rem
+				min-height: 180px 
+				max-height: 180px 
+				min-width: 160px
+				display: flex
+				align-items: center
+				justify-content: center
+				font-size: 6rem
+				color: $primary 
+				font-weight: bold
+				z-index: 1
+				transition: .3s ease-in-out all
+
+				
+				
+
+@keyframes AnimRoll1
+	from
+		transform: translateY(0)
+	to
+		transform: translateY(calc(-100% + 200px))
+				

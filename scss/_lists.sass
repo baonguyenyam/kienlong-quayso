@@ -1,0 +1,35 @@
+#lists-op
+	background: url(../img/bg-1.jpg) center center no-repeat
+	background-size: cover
+	background-attachment: fixed
+	
+.boxkienlong
+	margin: 0 2rem 
+	border-radius: 30px 0 30px 0
+	background: lighten($primary,30%)
+	padding: 1rem 
+	border: 3px solid rgb(255, 248, 66)
+	margin-bottom: 2rem 
+	box-shadow: 0 0 20px rgba(0,0,0,.5)
+	.itemkl 
+		background: $primary 
+		padding: 1rem 
+		color: #fff
+		margin-bottom: 2rem 
+		&:first-child 
+			border-radius: 20px 0 0 0
+		&:last-child 
+			border-radius: 0 0 20px 0
+			margin-bottom: 0
+			.li 
+				max-height: 320px 
+				overflow: scroll
+		h3 
+			text-transform: uppercase
+		.name 
+			color: rgb(255, 248, 66)
+		.add 
+			color: lighten($primary,20%)
+		.mobile 
+			color: lighten(#000,80%)
+			

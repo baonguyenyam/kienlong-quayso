@@ -1,0 +1,24 @@
+{
+    "data_results": {
+    "lists": {
+        "giaidacbiet" : [
+            "78907D;NGUYEN VAN THOI;78907D;KIENLONG BANK DA NANG"
+        ],
+        "giainhat": [
+            "78907D;NGUYEN VAN THOI;78907D;KIENLONG BANK DA NANG"
+        ],
+        "giainhi": [
+            "78907D;NGUYEN VAN THOI;78907D;KIENLONG BANK DA NANG;9879789798",
+            "GHYUJK;NGUYEN VAN THOI;123 Nguyen Van Troi;9879789798",
+            "KKKKKK;NGUYEN VAN THOI;123 Nguyen Van Troi;456789"
+        ],
+        "giaikhuyenkhich": [
+            "00000001;Nguyen Van A;78678;211A Ngo Tung Chau",
+            "00000002;Nguyen tran  A;67567;211A Ngo Tung Chau",
+            "00000003;Tran thi B;678768678;211A Ngo Tung Chau",
+            "00000001;Nguyen Van A;78678;211A Ngo Tung Chau"
+        ]
+    },
+    "bgimg": "./img/bg-giainhat.jpg"
+    }
+}

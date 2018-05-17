@@ -1,0 +1,11 @@
+{
+    "data_main": {
+    "lists": [
+        "1;Giải đặc biệt;1",
+        "2;Giải nhất;2",
+        "3;Giải nhì;3",
+        "4;Giải khuyến khích;4"
+    ],
+    "bgimg": "./img/bg-giainhat.jpg"
+    }
+}

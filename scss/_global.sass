@@ -256,25 +256,33 @@ audio
 		max-width: 300px
 
 .mainlottery
-	padding-top: 260px
+	padding-top: 17%
 
 .text-kienlong
 	color: $primary
 .table-kienlong
 	thead
 		tr
-			background: darken($primary,10%)
+			background: darken($primary,0%)
 			color: #fff
 			th, td
 				border-bottom: 0 solid #000
 				text-transform: uppercase
+				text-align: center
+				border: 2px solid #fff
 	tbody
 		tr
-			background: lighten($primary,10%)
-			color: #fff
+			background: lighten($vang,0%)
+			color: darken($primary,0%)
+			font-weight: bold
+			td
+				border: 2px solid #fff
+				text-align: center
+				padding: .25rem .5rem
 .resultbox
 	max-height: 385px
 	overflow: scroll
+	border-bottom: 1px solid #fff
 	.table
 		margin-bottom: 0
 .demomode
@@ -283,3 +291,6 @@ audio
 	right: 30px
 	img
 		max-width: 350px
+
+.text-danger
+    color: $secondary !important

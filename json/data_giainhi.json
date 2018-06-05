@@ -3,7 +3,7 @@
     "lists": ["78907D;NGUYEN VAN THOI;MSDT: 78907D;KIENLONG BANK DA NANG;9879789798","GHYUJK;NGUYEN VAN THOI;123 Nguyen Van Troi;9879789798",
         "KKKKKK;NGUYEN VAN THOI;123 Nguyen Van Troi;456789"],
     "settings": ["key,name,address,mobile"],
-    "bgimg": "./img/bg-giainhat.jpg",
+    "bgimg": "./img/giainhi.png",
     "imgs": "",
     "autostop": false,
     "autotime": 6000,

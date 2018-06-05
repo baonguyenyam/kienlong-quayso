@@ -6,7 +6,7 @@
     "settings": ["key,name,address,mobile"],
     "ltr": false,
     "bgimg": "./img/bg-giainhat.jpg",
-    "imgs": "",
+    "imgs": "./img/vang.png",
     "press": 2,
     "autostop": false,
     "autotime": 6000,

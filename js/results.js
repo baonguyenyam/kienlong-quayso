@@ -4,8 +4,8 @@ var results = {
 
 function getData() {
     $.ajax({
-        url: "http://kienlongbanklucky.canhcam.gb/api/AwardService.aspx?method=data_results",
-        type: "GET",
+		url: AppURL.results,
+		type: "GET",
         dataType: "json",
         cache: !0,
         complete: function (data) {
@@ -37,7 +37,7 @@ function putData(e, w) {
         var newlist = '<div class="col-6"><div class="name">' + dat[3] + '</div>' +
             '<div class="mobile">' + dat[1] + '</div>' +
             '<div class="add">' + dat[5] + '</div></div>';
-        
+
         buildList.push(newlist)
     }
     $('#'+w).html(buildList)

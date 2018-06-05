@@ -9,7 +9,7 @@ var giainhat = {
 
 function updateUerWin(e) {
     $.ajax({
-        url: "http://kienlongbanklucky.canhcam.gb/api/AwardService.aspx?p=" + e,
+        url: AppURL.giai_nhat_update + e,
         type: "GET",
         dataType: "json",
         cache: !0,
@@ -44,7 +44,7 @@ function passed() {
 
 function getData() {
     $.ajax({
-        url: "http://kienlongbanklucky.canhcam.gb/api/AwardService.aspx?method=data_giainhat",
+        url: AppURL.giai_nhat,
         type: "GET",
         dataType: "json",
         cache: !0,
@@ -192,7 +192,8 @@ function stopKey() {
         }).removeAttr("disabled");
         $('#pot').get(0).pause();
     }, 1000);
-    $('#stopnum').html("Dừng quay lần thứ " + giainhat.click)
+    $('#stopnum').html("Dừng quay")
+    // $('#stopnum').html("Dừng quay lần thứ " + giainhat.click)
     if (giainhat.click > giainhat.press) {
         stopKeyEnd()
         $('#stopnum').hide()
@@ -203,7 +204,7 @@ function stopKey() {
 function gold(b) {
     giainhat.lists = []
     var result = giainhat.text.split('')
-    geStopSlot(giainhat.ltr, giainhat.press, giainhat.click, result) 
+    geStopSlot(giainhat.ltr, giainhat.press, giainhat.click, result)
 }
 
 

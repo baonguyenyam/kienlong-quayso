@@ -21,7 +21,7 @@ function updateUerWin(e) {
     var endList = updateLists.toString()
     if (updateLists.length > 0) {
         $.ajax({
-            url: "http://kienlongbanklucky.canhcam.gb/api/AwardService.aspx?p=" + endList,
+            url: AppURL.giai_khuyenkhich_update + endList,
             type: "GET",
             dataType: "json",
             cache: !0,
@@ -33,7 +33,7 @@ function updateUerWin(e) {
 
 function getData() {
     $.ajax({
-        url: "http://kienlongbanklucky.canhcam.gb/api/AwardService.aspx?method=data_giaikhuyenkhich",
+        url: AppURL.giai_khuyenkhich,
         type: "GET",
         dataType: "json",
         cache: !0,

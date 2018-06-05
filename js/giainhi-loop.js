@@ -13,7 +13,7 @@ var giainhi = {
 
 function updateUerWin(e) {
     $.ajax({
-        url: "http://kienlongbanklucky.canhcam.gb/api/AwardService.aspx?p=" + e,
+        url: AppURL.giai_nhi_update + e,
         type: "GET",
         dataType: "json",
         cache: !0,
@@ -53,7 +53,7 @@ function passed() {
 
 function getData() {
     $.ajax({
-        url: "http://kienlongbanklucky.canhcam.gb/api/AwardService.aspx?method=data_giainhi",
+        url: AppURL.giai_nhi,
         type: "GET",
         dataType: "json",
         cache: !0,
@@ -173,7 +173,7 @@ function getRandomKey() {
                     countDown()
                 }
             }, giainhi.autotime);
-    
+
         } else {
             $('#getnum').hide();
             $('#getnumautosop').hide();
@@ -216,7 +216,7 @@ function getlastKey() {
 
 function stopKey() {
     $('#pot').get(0).play();
-    
+
     gold(giainhi.ltr)
     setTimeout(function () {
         $('#pot').get(0).pause();

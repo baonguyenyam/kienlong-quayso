@@ -1,20 +1,30 @@
-// (function ($, interval, slides) {
-//     var i = 0;
-//     var handle = setInterval(function () {
-//         $('#index').css("background-image", "url('" + slides[i] + "')");
-//         i++;
-//         if (i >= slides.length) {
-//             i = 0;
-//         }
-//     }, interval);
-// })(jQuery, 3000, [
-//     "img/welcome.jpg",
-//     "img/bg.jpg",
-//     "img/unsplash1.jpg",
-//     "img/unsplash2.jpg",
-//     "img/unsplash3.jpg",
-// ]);
-
+// var AppURL = {
+// 	giai_dacbiet: 'http://kienlongbanklucky.canhcam.gb/api/AwardService.aspx?method=data_giaidacbiet',
+// 	giai_dacbiet_update: 'http://kienlongbanklucky.canhcam.gb/api/AwardService.aspx?p=',
+// 	giai_khuyenkhich: 'http://kienlongbanklucky.canhcam.gb/api/AwardService.aspx?method=data_giaikhuyenkhich',
+// 	giai_khuyenkhich_update: 'http://kienlongbanklucky.canhcam.gb/api/AwardService.aspx?p=',
+// 	giai_nhat: 'http://kienlongbanklucky.canhcam.gb/api/AwardService.aspx?method=data_giainhat',
+// 	giai_nhat_update: 'http://kienlongbanklucky.canhcam.gb/api/AwardService.aspx?p=',
+// 	giai_nhi: 'http://kienlongbanklucky.canhcam.gb/api/AwardService.aspx?method=data_giainhi',
+// 	giai_nhi_update: 'http://kienlongbanklucky.canhcam.gb/api/AwardService.aspx?p=',
+// 	kiemtra: "http://kienlongbanklucky.canhcam.gb/api/AwardService.aspx?method=",
+// 	main: "http://kienlongbanklucky.canhcam.gb/api/AwardService.aspx?method=Control",
+// 	results: "http://kienlongbanklucky.canhcam.gb/api/AwardService.aspx?method=data_results"
+// };
+var AppURL = {
+	giai_dacbiet: './json/data_giaidacbiet.json',
+	giai_dacbiet_update: '/?p=',
+	giai_khuyenkhich: './json/data_giaikhuyenkhich.json',
+	giai_khuyenkhich_update: '/?p=',
+	giai_nhat: './json/data_giainhat.json',
+	giai_nhat_update: '/?p=',
+	giai_nhi: './json/data_giainhi.json',
+	giai_nhi_update: '/?p=',
+	kiemtra: "./json/.json",
+	main: "./json/control.json",
+	index: "./json/index.json",
+	results: "./json/data_result.jsons"
+};
 
 function getUrlVars() {
     var vars = [], hash;
@@ -26,7 +36,7 @@ function getUrlVars() {
     }
     return vars;
 }
-    
+
 function DemoMode() {
     $('body').append('<div class="demomode"><img src="./img/demo.png"></div>')
 }

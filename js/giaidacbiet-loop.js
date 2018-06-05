@@ -10,7 +10,7 @@ var giaidacbiet = {
 
 function updateUerWin(e) {
     $.ajax({
-        url: "http://kienlongbanklucky.canhcam.gb/api/AwardService.aspx?p="+e,
+        url: AppURL.giai_dacbiet_update + e,
         type: "GET",
         dataType: "json",
         cache: !0,
@@ -32,21 +32,20 @@ function victoryStep() {
         fancyPopIn();
         updateUerWin(giaidacbiet.Fulltext[0])
         $('#buzzer').get(0).play();
-        
+
     }, 300);
     setTimeout(function () {
         $('body').removeClass('phaono')
     }, 2000);
 }
 function passed() {
-    geStopSlot(giaidacbiet.ltr, 0, giaidacbiet.click, giaidacbiet.text.split('')) 
+    geStopSlot(giaidacbiet.ltr, 0, giaidacbiet.click, giaidacbiet.text.split(''))
     $('#getnumautosop').hide()
 }
 
 function getData() {
     $.ajax({
-        url: "/data_giaidacbiet.json",
-        // url: "http://kienlongbanklucky.canhcam.gb/api/AwardService.aspx?method=data_giaidacbiet",
+        url: AppURL.giai_dacbiet,
         type: "GET",
         dataType: "json",
         cache: !0,
@@ -194,7 +193,8 @@ function stopKey() {
         }).removeAttr("disabled");
         $('#pot').get(0).pause();
     }, 1000);
-    $('#stopnum').html("Dừng quay lần thứ " + giaidacbiet.click)
+    $('#stopnum').html("Dừng quay")
+    // $('#stopnum').html("Dừng quay lần thứ " + giaidacbiet.click)
     if (giaidacbiet.click > giaidacbiet.press) {
         stopKeyEnd()
         $('#stopnum').hide()
@@ -205,7 +205,7 @@ function stopKey() {
 function gold(b) {
     giaidacbiet.lists = []
     var result = giaidacbiet.text.split('')
-    geStopSlot(giaidacbiet.ltr, giaidacbiet.press, giaidacbiet.click, result) 
+    geStopSlot(giaidacbiet.ltr, giaidacbiet.press, giaidacbiet.click, result)
 }
 
 function geStopSlot(a, b, c, result) {

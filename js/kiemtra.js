@@ -4,7 +4,7 @@ var timkiem = {
 
 function getData() {
     $.ajax({
-        url: "http://kienlongbanklucky.canhcam.gb/api/AwardService.aspx?method=",
+        url: AppURL.kiemtra,
         type: "GET",
         dataType: "json",
         cache: !0,
@@ -23,7 +23,7 @@ function getData() {
 
 function doSearch(a) {
     $.ajax({
-        url: "http://kienlongbanklucky.canhcam.gb/api/AwardService.aspx?method="+a,
+        url: AppURL.kiemtra + a,
         type: "GET",
         dataType: "json",
         cache: !0,
@@ -55,13 +55,13 @@ function buildLists(a) {
     var buildList = []
     for (var index = 0; index < timkiem.lists.length; index++) {
         var newlist = '<tr>' +
-            '<td>' + (index+1) +'</td>' + 
-            '<td>' + timkiem.lists[index].split(';')[2] +'</td>' + 
-            '<td>' + timkiem.lists[index].split(';')[1] +'</td>' + 
-            '<td>' + timkiem.lists[index].split(';')[4] +'</td>' + 
-            '<td>' + timkiem.lists[index].split(';')[3] +'</td>' + 
+            '<td>' + (index+1) +'</td>' +
+            '<td>' + timkiem.lists[index].split(';')[2] +'</td>' +
+            '<td>' + timkiem.lists[index].split(';')[1] +'</td>' +
+            '<td>' + timkiem.lists[index].split(';')[4] +'</td>' +
+            '<td>' + timkiem.lists[index].split(';')[3] +'</td>' +
         '<tr>';
-        buildList.push(newlist)      
+        buildList.push(newlist)
     }
     $('.table-kienlong tbody').append(buildList)
 }

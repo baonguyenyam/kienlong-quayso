@@ -4,7 +4,7 @@ var datamain = {
 
 function getData() {
     $.ajax({
-        url: "http://kienlongbanklucky.canhcam.gb/api/AwardService.aspx?method=Control",
+        url: AppURL.main,
         type: "GET",
         dataType: "json",
         cache: !0,

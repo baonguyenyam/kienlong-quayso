@@ -1,254 +1,285 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&subset=vietnamese')
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&subset=vietnamese')
 
-html, body 
-    height: 100%
-    width: 100%
-    font-family: 'Roboto', serif
-    .phaono 
-        overflow: hidden
+html, body
+	height: 100%
+	width: 100%
+	font-family: 'Roboto', serif
+	.phaono
+		overflow: hidden
 
 .stepbystep
-    text-align: center
-    display: flex 
-    flex-direction: column
-    align-items: center
-    justify-content: center
-    margin: 3rem 0 2rem 0
-    h2
-        font-weight: bold 
-        text-transform: uppercase
-        margin: 0 0 .2rem 0
-        text-shadow: 1px 1px 1px rgba(255,255,255,.5)
-        white-space: nowrap
-        color: $secondary
-        font-size: 3rem
-        text-shadow: -2px 0 rgb(255, 248, 66), 0 2px rgb(255, 248, 66), 2px 0 rgb(255, 248, 66), 0 -2px rgb(255, 248, 66)
-    p 
-        font-weight: bold
-        line-height: 1rem
-        margin: 0  
-        letter-spacing: .25px
-        text-shadow: 1px 1px 1px rgba(255,255,255,.5)
-        color: $primary
-        white-space: nowrap
+	text-align: center
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	margin: 3rem 0 2rem 0
+	h2
+		font-weight: bold
+		text-transform: uppercase
+		margin: 0 0 .2rem 0
+		text-shadow: 1px 1px 1px rgba(255,255,255,.5)
+		white-space: nowrap
+		color: $secondary
+		font-size: 3rem
+		text-shadow: -2px 0 rgb(255, 248, 66), 0 2px rgb(255, 248, 66), 2px 0 rgb(255, 248, 66), 0 -2px rgb(255, 248, 66)
+	p
+		font-weight: bold
+		line-height: 1rem
+		margin: 0
+		letter-spacing: .25px
+		text-shadow: 1px 1px 1px rgba(255,255,255,.5)
+		color: $primary
+		white-space: nowrap
 
-nav 
-    padding: 1rem
-    margin-bottom: 1rem 
-    position: absolute
-    top: 0
-    left: 0 
+nav
+	padding: 1rem
+	margin-bottom: 1rem
+	position: absolute
+	top: 0
+	left: 0
 .logo
-    img 
-        max-width: 180px
+	img
+		max-width: 180px
 
-.slogan 
-    position: absolute
-    left: 0 
-    top: 70% 
-    transform: translateY(-50%)
+.slogan
+	position: absolute
+	left: 0
+	top: 70%
+	transform: translateY(-50%)
 
 
-.btn 
-    padding: 1rem 2rem
-    border-radius: 10px 0 10px 0
-    font-size: 1.5rem
-    text-transform: uppercase
-    line-height: 1.5rem
-    // background: $primary
-    background-color: rgb(9, 90, 109)
-    border: 3px solid rgb(255, 248, 66)
-    color: white
-    position: relative
-    // &:before 
-    //     content: ''
-    //     display: block 
-    //     box-shadow: 0 6px 6px rgba(255, 255, 255, .45) inset
-    //     position: absolute
-    //     top: 0px
-    //     left: 0
-    //     height: 20px
-    //     width: 100%
-    //     z-index: 10
-    // &:after 
-    //     content: ''
-    //     display: block 
-    //     box-shadow: 0 -6px 6px rgba(255, 255, 255, .45) inset
-    //     position: absolute
-    //     bottom: 0px
-    //     left: 0
-    //     height: 20px
-    //     width: 100%
-    //     z-index: 10
-    &:hover, &:focus, &:active, &.active, &:disabled, &.disabled
-        background: darken($primary,5%) !important
-        border: 3px solid darken($primary,10%) !important
-        
+.btn
+	padding: 1rem 2rem
+	border-radius: 10px 0 10px 0
+	font-size: 1.5rem
+	text-transform: uppercase
+	line-height: 1.5rem
+	// background: $primary
+	// background-color: rgb(9, 90, 109)
+	// border: 3px solid rgb(255, 248, 66)
+	color: white
+	position: relative
+	-moz-box-shadow: inset 0px 1px 3px 0px #8bffff, inset 0px -1px 3px 0px #045152
+	-webkit-box-shadow: inset 0px 1px 3px 0px #8bffff, inset 0px -1px 3px 0px #045152
+	box-shadow: inset 0px 1px 3px 0px #8bffff, inset 0px -1px 3px 0px #045152
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007476), color-stop(1, #007476))
+	background: -moz-linear-gradient(top, #007476 5%, #007476 100%)
+	background: -webkit-linear-gradient(top, #007476 5%, #007476 100%)
+	background: -o-linear-gradient(top, #007476 5%, #007476 100%)
+	background: -ms-linear-gradient(top, #007476 5%, #007476 100%)
+	background: linear-gradient(to bottom, #007476 5%, #007476 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#007476', endColorstr='#007476',GradientType=0)
+	background-color: #007476
+	-moz-border-radius: 3px
+	-webkit-border-radius: 3px
+	border-radius: 3px
+	border: 1px solid #015657
+	display: inline-block
+	cursor: pointer
+	color: #ffffff
+	font-family: Arial
+	font-size: 1rem
+	padding: 6px 24px
+	text-decoration: none
+	text-shadow: 0px 1px 0px #015657
+	&:hover, &:focus, &:active, &.active, &:disabled, &.disabled
+		color: white
+		position: relative
+		-moz-box-shadow: inset 0px 1px 3px 0px #8bffff, inset 0px -1px 3px 0px #045152
+		-webkit-box-shadow: inset 0px 1px 3px 0px #8bffff, inset 0px -1px 3px 0px #045152
+		box-shadow: inset 0px 1px 3px 0px #8bffff, inset 0px -1px 3px 0px #045152
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007476), color-stop(1, #007476))
+		background: -moz-linear-gradient(top, #007476 5%, #007476 100%)
+		background: -webkit-linear-gradient(top, #007476 5%, #007476 100%)
+		background: -o-linear-gradient(top, #007476 5%, #007476 100%)
+		background: -ms-linear-gradient(top, #007476 5%, #007476 100%)
+		background: linear-gradient(to bottom, #007476 5%, #007476 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#007476', endColorstr='#007476',GradientType=0)
+		background-color: #007476
+		-moz-border-radius: 3px
+		-webkit-border-radius: 3px
+		border-radius: 3px
+		border: 1px solid #015657
+		display: inline-block
+		cursor: pointer
+		color: #ffffff
+		font-family: Arial
+		font-size: 1rem
+		padding: 6px 24px
+		text-decoration: none
+		text-shadow: 0px 1px 0px #015657
 .noted
-    text-transform: uppercase
-    color: $primary
-    text-align: right
-    margin-top: 1.8rem
-    display: flex 
-    flex-direction: column
-    justify-content: center
-    // position: absolute
-    // right: 3rem 
-    // top: 2rem  
-    h1 
-        font-weight: bold 
-        line-height: 2.5rem
-        margin: 0 
-        white-space: nowrap
-        text-shadow: 1px 1px 1px rgba(255,255,255,.5)
-    p 
-        font-weight: bold
-        line-height: 1rem
-        margin: 0  
-        white-space: nowrap
-        letter-spacing: .25px
-        text-shadow: 1px 1px 1px rgba(255,255,255,.5)
+	text-transform: uppercase
+	color: $primary
+	text-align: right
+	margin-top: 1.8rem
+	display: flex
+	flex-direction: column
+	justify-content: center
+	// position: absolute
+	// right: 3rem
+	// top: 2rem
+	h1
+		font-weight: bold
+		line-height: 2.5rem
+		margin: 0
+		white-space: nowrap
+		text-shadow: 1px 1px 1px rgba(255,255,255,.5)
+	p
+		font-weight: bold
+		line-height: 1rem
+		margin: 0
+		white-space: nowrap
+		letter-spacing: .25px
+		text-shadow: 1px 1px 1px rgba(255,255,255,.5)
 
 #congrats
-    position: absolute
-    top: calc(50% - 50px)
-    width: 550px
-    height: 100px
-    line-height: 1
-    text-align: center
-    margin: 0 auto
-    left: 0
-    right: 0
+	position: absolute
+	top: calc(50% - 50px)
+	width: 550px
+	height: 100px
+	line-height: 1
+	text-align: center
+	margin: 0 auto
+	left: 0
+	right: 0
 
 #title
-    transform-origin: 50% 50%
-    font-size: 50px
-    font-family: 'Sigmar One', cursive
-    cursor: pointer
-    z-index: 2
-    position: absolute
-    top: 0
-    text-align: center
-    width: 100%
-    user-select: none
-    -webkit-user-select: none
+	transform-origin: 50% 50%
+	font-size: 50px
+	font-family: 'Sigmar One', cursive
+	cursor: pointer
+	z-index: 2
+	position: absolute
+	top: 0
+	text-align: center
+	width: 100%
+	user-select: none
+	-webkit-user-select: none
 
 .particle
-    height: 50px
-    width: 50px
-    position: absolute
-    top: 45%
-    left: 45%
-    z-index: 1
-    font-size: 30px
-    // display: none
+	height: 50px
+	width: 50px
+	position: absolute
+	top: 45%
+	left: 45%
+	z-index: 1
+	font-size: 30px
+	// display: none
 
 .star
-    color: #ffcc00
+	color: #ffcc00
 
 .blob
-    background: #d5f2ff
-    background: rgba(red(#ffcc00), green(#ffcc00), blue(#ffcc00), 0.25)
-    border-radius: 50%
-    display: block
+	background: #d5f2ff
+	background: rgba(red(#ffcc00), green(#ffcc00), blue(#ffcc00), 0.25)
+	border-radius: 50%
+	display: block
 
 
-.loading 
-    position: relative
-    font-size: 1.2em
-    color: #fff
-    text-align: center
-    display: none
-    &:before
-        content: attr(data-text)
-        position: absolute
-        overflow: hidden
-        max-width: 18rem
-        white-space: nowrap
-        color: $primary
-        animation: loading infinite 3s linear
+.loading
+	position: relative
+	font-size: 1.2em
+	color: #fff
+	text-align: center
+	display: none
+	&:before
+		content: attr(data-text)
+		position: absolute
+		overflow: hidden
+		max-width: 18rem
+		white-space: nowrap
+		color: $primary
+		animation: loading infinite 3s linear
 
-@keyframes loading 
-    0%
-        max-width: 0
+@keyframes loading
+	0%
+		max-width: 0
 
 audio
-    display: none
+	display: none
 
 .quatang
-    position: fixed
-    top: 360px 
-    right: 90px
-    img 
-        max-width: 300px 
-        max-height: 280px 
+	position: fixed
+	top: 30%
+	left: 2%
+	z-index: -1
+	img
+		max-width: 450px
+		// max-height: 280px
 
 
-.chucmung, 
-.chucmung1 
-    // position: fixed
-    // top: 470px 
-    // left: 160px
-    // transform: translateX(-100%)
-    h3 
-        color: $primary 
-        font-weight: bold
-        text-transform: uppercase
-        letter-spacing: 1px 
-        margin-bottom: .25rem 
-        white-space: nowrap
-        font-size: 2.5rem
-        line-height: 3rem
-        text-shadow: -2px 0 #fff, 0 2px #fff, 2px 0 #fff, 0 -2px #fff
-    .add 
-        margin-bottom: 0 
-        color: $primary 
-        font-weight: bold
-        text-transform: uppercase
-        margin-bottom: .25rem 
-        white-space: nowrap
-        line-height: 2rem 
-        font-size: 2rem
-        text-shadow: -2px 0 #fff, 0 2px #fff, 2px 0 #fff, 0 -2px #fff
-    .text-muted 
-        margin-bottom: 0 
-        color: $primary 
-        font-weight: bold
-        text-transform: uppercase
-        margin-bottom: .25rem 
-        white-space: nowrap
-        line-height: 2rem 
-        font-size: 2rem
-        text-shadow: -2px 0 #fff, 0 2px #fff, 2px 0 #fff, 0 -2px #fff
-    img 
-        max-width: 300px 
+.chucmung,
+.chucmung1
+	z-index: 1000
+	h3
+		color: $secondary
+		font-weight: bold
+		text-transform: uppercase
+		margin-bottom: .25rem
+		white-space: nowrap
+		font-size: 3rem
+		line-height: 3.5rem
+		text-shadow: -2px 0 #fffe93, 0 2px #fffe93, 2px 0 #fffe93, 0 -2px #fffe93
+	.cmkh
+		color: $secondary
+		font-weight: bold
+		text-transform: uppercase
+		margin-bottom: .25rem
+		white-space: nowrap
+		font-size: 2.5rem
+		line-height: 3rem
+		text-shadow: -2px 0 #fffe93, 0 2px #fffe93, 2px 0 #fffe93, 0 -2px #fffe93
+	.add
+		margin-bottom: 0
+		color: $primary
+		font-weight: bold
+		text-transform: uppercase
+		margin-bottom: .25rem
+		white-space: nowrap
+		line-height: 2.5rem
+		font-size: 2rem
+		// text-shadow: -2px 0 #fff, 0 2px #fff, 2px 0 #fff, 0 -2px #fff
+	.text-muted
+		margin-bottom: 0
+		color: $primary !important
+		font-weight: bold
+		text-transform: uppercase
+		margin-bottom: .25rem
+		white-space: nowrap
+		line-height: 2.5rem
+		font-size: 2rem
+		// text-shadow: -2px 0 #fff, 0 2px #fff, 2px 0 #fff, 0 -2px #fff
+	img
+		max-width: 300px
 
 .mainlottery
-    padding-top: 260px
+	padding-top: 260px
 
 .text-kienlong
-    color: $primary
+	color: $primary
 .table-kienlong
-    thead
-        tr 
-            background: darken($primary,10%)
-            color: #fff 
-            th, td 
-                border-bottom: 0 solid #000
-                text-transform: uppercase
-    tbody 
-        tr 
-            background: lighten($primary,10%)
-            color: #fff 
+	thead
+		tr
+			background: darken($primary,10%)
+			color: #fff
+			th, td
+				border-bottom: 0 solid #000
+				text-transform: uppercase
+	tbody
+		tr
+			background: lighten($primary,10%)
+			color: #fff
 .resultbox
-    max-height: 385px
-    overflow: scroll
-    .table
-        margin-bottom: 0
+	max-height: 385px
+	overflow: scroll
+	.table
+		margin-bottom: 0
 .demomode
-    position: fixed 
-    top: 50px 
-    right: 30px 
-    img 
-        max-width: 350px
+	position: fixed
+	top: 50px
+	right: 30px
+	img
+		max-width: 350px

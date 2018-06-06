@@ -1392,6 +1392,7 @@ audio {
   border: 1px solid #ced4db;
   background: #ced4db;
   color: #000;
+  box-shadow: none;
 }
 
 #settings #menu .card .card-body .btn:hover, #settings #menu .card .card-body .btn:active, #settings #menu .card .card-body .btn:focus {

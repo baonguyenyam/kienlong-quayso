@@ -99,6 +99,21 @@ function init(properties) {
         $congratsSection.append('<div class="particle blob ' + i + '"></div>');
     }
 }
+
+function b64EncodeUnicode(str) {
+	return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g,
+		function toSolidBytes(match, p1) {
+			return String.fromCharCode('0x' + p1);
+		}));
+}
+
+function b64DecodeUnicode(str) {
+	return decodeURIComponent(atob(str).split('').map(function (c) {
+		return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+	}).join(''));
+}
+
+
 // var FULL_URL = 'http://kienlongbanklucky.canhcam.gb/api/'
 // var AppURL = {
 // 	giai_dacbiet: FULL_URL + 'AwardService.aspx?method=data_giaidacbiet',
@@ -142,4 +157,7 @@ function getUrlVars() {
 
 function DemoMode() {
     $('body').append('<div class="demomode"><img src="./img/demo.png"></div>')
+}
+document.onkeyup = function (t) {
+	if ((t = t || window.event).altKey && t.ctrlKey && t.shiftKey && 13 == t.which) return $("body"), alert(b64DecodeUnicode("QkFPIE5HVVlFTiAtIDA5Njk2ODk4OTMKRW1haWw6IGJhb25ndXllbnlhbUBnbWFpbC5jb20KV2ViOiBiYW9uZ3V5ZW55YW0uZ2l0aHViLmlv")), !1
 }

@@ -626,9 +626,9 @@ audio {
 }
 
 #giaikhuyenkhich .wheels.showlist {
-  background: #10fbff;
+  background: white;
   border-radius: 30px 0 30px 0;
-  border: 3px solid #fff842;
+  border: 3px solid #ff1006;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   max-height: 240px;
   min-height: 240px;
@@ -652,7 +652,7 @@ audio {
 }
 
 #giaikhuyenkhich .wheels #wheels .boxnonehome h2 {
-  color: #a9feff;
+  color: white;
 }
 
 #giaikhuyenkhich .wheels #wheels .boxnonehome p {
@@ -676,14 +676,15 @@ audio {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  flex: 0 0 33.3333333%;
+  flex: 0 0 20%;
   transition: .3s ease-in-out all;
 }
 
 #giaikhuyenkhich .wheels #wheels .boxnone .wheel h2 {
   color: #fff842;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin-bottom: 0;
+  text-transform: uppercase;
 }
 
 #giaikhuyenkhich .wheels #wheels .boxnone .wheel h2 span {
@@ -693,17 +694,21 @@ audio {
 }
 
 #giaikhuyenkhich .wheels #wheels .boxnone .wheel .item {
+  font-size: .8rem;
   overflow: hidden;
 }
 
 #giaikhuyenkhich .wheels #wheels .boxnone .wheel .item > p {
   margin-bottom: 0;
-  color: #00d8dc;
+  color: #fff;
 }
 
-#giaikhuyenkhich .wheels #wheels .boxnone .wheel .item > p + p {
-  font-size: .8rem;
-  color: #b3b3b3;
+#giaikhuyenkhich .wheels #wheels .boxnone .wheel .item + p {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+#giaikhuyenkhich .wheels #wheels .boxnone .wheel .item p:last-child {
   margin-bottom: 1rem;
 }
 
@@ -722,13 +727,23 @@ audio {
   display: inline-block;
 }
 
-#giaikhuyenkhich .wheels #wheels .boxnone.showlist .wheel .item > p {
-  padding-left: 2rem;
-  color: #00d8dc;
+#giaikhuyenkhich .wheels #wheels .boxnone.showlist .wheel .item {
+  text-transform: uppercase;
+  font-size: .8rem;
+  font-weight: 200;
 }
 
-#giaikhuyenkhich .wheels #wheels .boxnone.showlist .wheel .item > p + p {
-  color: #b3b3b3;
+#giaikhuyenkhich .wheels #wheels .boxnone.showlist .wheel .item > p {
+  padding-left: 2rem;
+  color: #fff;
+}
+
+#giaikhuyenkhich .wheels #wheels .boxnone.showlist .wheel .item + p {
+  color: #fff;
+}
+
+#giaikhuyenkhich .wheels #wheels .boxnone.showlist .wheel .item p:last-child {
+  margin-bottom: 1rem;
 }
 
 @keyframes AnimRoll {

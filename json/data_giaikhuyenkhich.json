@@ -88,7 +88,7 @@
         "00000004;Nguyen Van A;78678;211A Ngo Tung Chau"
     ],
     "settings": ["key,name,address,mobile"],
-    "bgimg": "./img/bg-giainhat.jpg",
+    "bgimg": "./img/bg-giaikhuyenkhich.jpg",
     "imgs": "",
     "step": 3,
     "autostop": false,

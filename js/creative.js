@@ -23,7 +23,7 @@ var AppURL = {
 	kiemtra: "./json/.json",
 	main: "./json/control.json",
 	index: "./json/index.json",
-	results: "./json/data_result.jsons"
+	results: "./json/data_results.json"
 };
 
 function getUrlVars() {

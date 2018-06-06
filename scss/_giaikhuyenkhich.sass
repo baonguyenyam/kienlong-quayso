@@ -2,7 +2,6 @@
 	// background: url(../img/bg-1.jpg) center center no-repeat
 	background-size: cover
 	background-attachment: fixed
-
 	.wheels
 		box-shadow: 1px 1px 5px rgba(0,0,0,.5)
 		border-radius: 20px 0 20px 0
@@ -14,9 +13,9 @@
 		display: block
 		position: relative
 		&.showlist
-			background: lighten($primary,30%)
+			background: lighten($primary,90%)
 			border-radius: 30px 0 30px 0
-			border: 3px solid rgb(255, 248, 66)
+			border: 3px solid #ff1006
 			box-shadow: 0 0 20px rgba(0,0,0,.5)
 			max-height: 240px
 			min-height: 240px
@@ -26,19 +25,19 @@
 			height: calc(230px - 2rem)
 			background: $primary
 			border-radius: 20px 0 20px 0
-			.boxnonehome 
+			.boxnonehome
 				display: flex
 				flex-direction: column
 				width: 100%
 				align-items: center
 				justify-content: center
 				height: 100%
-				h2 
-					color: lighten($primary,60%) 
-				p 
-					color: lighten(#000,80%) 
+				h2
+					color: lighten($primary,90%)
+				p
+					color: lighten(#000,80%)
 					margin-bottom: 0
-			
+
 			.boxnone
 				display: flex
 				flex-direction: row
@@ -51,47 +50,55 @@
 					display: flex
 					flex-direction: column
 					overflow: hidden
-					flex: 0 0 33.3333333%
+					flex: 0 0 20%
 					transition: .3s ease-in-out all
-					h2 
+					h2
 						color: rgb(255, 248, 66)
-						font-size: 1.3rem
+						font-size: 1.1rem
 						margin-bottom: 0
-						span 
-							color: #fff 
+						text-transform: uppercase
+						span
+							color: #fff
 							width: 2rem
 							display: none
-					.item 
+					.item
+						font-size: .8rem
 						overflow: hidden
-						> p 
-							margin-bottom: 0 
-							color: lighten($primary,20%)
-							+ p 
-								font-size: .8rem 
-								color: lighten(#000,70%)
-								margin-bottom: 1rem 
+						> p
+							margin-bottom: 0
+							color: #fff
+						+ p
+							color: #fff
+							margin-bottom: 1rem
+						p:last-child
+							margin-bottom: 1rem
 				&.showlist
 					overflow: scroll
 					max-height: calc(230px - 2rem)
 					height: auto
 					padding: 1rem
 					.wheel
-						h2 
+						h2
 							color: rgb(255, 248, 66)
-							span 
+							span
 								display: inline-block
-						.item 
-							> p 
+						.item
+							text-transform: uppercase
+							font-size: .8rem
+							font-weight: 200
+							> p
 								padding-left: 2rem
-								color: lighten($primary,20%)
-								+ p 
-									color: lighten(#000,70%)
+								color: #fff
+							+ p
+								color: #fff
+							p:last-child
+								margin-bottom: 1rem
 
 @keyframes AnimRoll
 	from
 		transform: translateY(0)
 	to
 		transform: translateY(calc(-100% + 230px))
-				
+
 
 

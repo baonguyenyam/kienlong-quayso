@@ -257,7 +257,8 @@ function forList(a) {
     var reli = a
     for (var index = 0; index < reli.length; index++) {
         var item = reli[index].split(';')
-        lists.push('<div class="wheel"><div class="item"><h2><span>' + (index + 1) + '.</span>' + item[1] + '</h2><p>' + item[3] + '</p><p>Mobile: ' + item[4] + '</p></div></div>')
+        lists.push('<div class="wheel"><div class="item"><h2><span>' + (index + 1) + '.</span>' + item[1] + '</h2><p>' + item[3] + '</p><p>' + item[4] + '</p><p>' + item[5] + '</p></div></div>')
+
     }
     return $('#wheels .boxnone').html(lists)
 }

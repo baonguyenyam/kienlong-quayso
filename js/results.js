@@ -9,6 +9,8 @@ function getData() {
         dataType: "json",
         cache: !0,
         complete: function (data) {
+			console.log(data)
+
             var tmpData = data.responseJSON.data_results;
             results.giaidacbiet = tmpData.giaidacbiet
             results.giainhat = tmpData.giainhat

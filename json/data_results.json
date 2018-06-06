@@ -1,6 +1,5 @@
 {
     "data_results": {
-    "lists": {
         "giaidacbiet" : [
             "78907D;NGUYEN VAN THOI;78907D;KIENLONG BANK DA NANG"
         ],
@@ -18,7 +17,8 @@
             "00000003;Tran thi B;678768678;211A Ngo Tung Chau",
             "00000001;Nguyen Van A;78678;211A Ngo Tung Chau"
         ]
-    },
-    "bgimg": "./img/bg-giainhat.jpg"
+    ,
+    "bgimg": "./img/ketqua-none.png"
+
     }
 }

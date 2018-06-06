@@ -178,7 +178,9 @@ function stopKeyEnd() {
     }, 300);
     setTimeout(function () {
         if ((giaikhuyenkhich.click - 1) < giaikhuyenkhich.step) {
-            $('#getnumautosop').removeAttr("disabled").html('Đợt quay thứ ' + giaikhuyenkhich.click);
+            $('#getnumautosop').removeAttr("disabled").html('Quay số');
+
+            // $('#getnumautosop').removeAttr("disabled").html('Đợt quay thứ ' + giaikhuyenkhich.click);
             $('#getnumautosop').show()
         } else {
             $('#ketqua').show()

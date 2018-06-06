@@ -325,6 +325,11 @@ audio {
   padding: .25rem .5rem;
 }
 
+.table-kienlong tbody tr td.namegiai {
+  background: #fff;
+  text-align: left;
+}
+
 .resultbox {
   max-height: 385px;
   overflow: scroll;

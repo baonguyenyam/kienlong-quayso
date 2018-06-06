@@ -1,6 +1,8 @@
 var results = {
     animation: 3.5
 }
+var buildListResults = []
+
 
 function getData() {
     $.ajax({
@@ -32,17 +34,18 @@ function getData() {
 getData()
 
 function putData(e, w) {
-    var buildList = []
-    for (var index = 0; index < e.length; index++) {
-        var dat = e[index].split(';')
-
-        var newlist = '<div class="col-6"><div class="name">' + dat[3] + '</div>' +
-            '<div class="mobile">' + dat[1] + '</div>' +
-            '<div class="add">' + dat[5] + '</div></div>';
-
-        buildList.push(newlist)
-    }
-    $('#'+w).html(buildList)
+	buildListResults.push('<tr><td colspan="5" class="namegiai">Giải đặc biệt ' + e.length + ' giải</td></tr>')
+	for (var index = 0; index < e.length; index++) {
+		var dat = e[index].split(';')
+		var newlist = '<tr>' +
+			'<td>' + (index + 1) + '</td>' +
+			'<td>' + dat[3] + '</td>' +
+			'<td>' + dat[1] + '</td>' +
+			'<td>' + dat[5] + '</td>' +
+			'<td>' + dat[4] + '</td>' +
+			'<tr>';
+		buildListResults.push(newlist)
+	}
 }
 
 
@@ -50,9 +53,10 @@ function getGiaiThuong() {
     putData(results.giaidacbiet, 'giaidacbiet')
     putData(results.giainhat, 'giainhat')
     putData(results.giainhi, 'giainhi')
-    putData(results.giaikhuyenkhich, 'giaikhuyenkhich')
+	putData(results.giaikhuyenkhich, 'giaikhuyenkhich')
+	$('#lists-op table tbody').append(buildListResults)
 }
 
-setInterval(function() {
-    getGiaiThuong()
-}, 3000);
+// setInterval(function() {
+//     getGiaiThuong()
+// }, 3000);

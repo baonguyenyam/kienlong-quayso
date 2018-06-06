@@ -39,7 +39,8 @@ function victoryStep() {
     }, 300);
     setTimeout(function () {
         if (giainhi.click <= giainhi.Fulltext.length) {
-            $('#getnumautosop').removeAttr("disabled").html('Người may mắn thứ ' + giainhi.click);
+            $('#getnumautosop').removeAttr("disabled").html('Quay số');
+            // $('#getnumautosop').removeAttr("disabled").html('Người may mắn thứ ' + giainhi.click);
             $('#getnumautosop').show()
         } else {
             $('#ketqua').show()
@@ -62,13 +63,14 @@ function getData() {
             giainhi.text = tmpData.lists;
             giainhi.Fulltext = tmpData.lists;
             giainhi.autotime = tmpData.autotime
-            giainhi.autostop = true
-            // giainhi.autostop = tmpData.autostop
+            // giainhi.autostop = true
+            giainhi.autostop = tmpData.autostop
             giainhi.imgs = tmpData.imgs
             giainhi.passed = tmpData.lists[0].split(';')[2];
             if (giainhi.passed === 'true') {
                 giainhi.click++
-                $('#getnumautosop').removeAttr("disabled").html('Người may mắn thứ ' + giainhi.click);
+                $('#getnumautosop').removeAttr("disabled").html('Quay số');
+                // $('#getnumautosop').removeAttr("disabled").html('Người may mắn thứ ' + giainhi.click);
                 $('.text-kienlong').html('Lần quay ' + (giainhi.click-1) + '/' + tmpData.lists.length + '')
                 victoryStep()
                 passed()
@@ -145,7 +147,8 @@ function getRandomKey() {
     if (giainhi.text[(giainhi.click - 1)].split(';')[2] === 'true') {
         giainhi.click++
         if (giainhi.click <= giainhi.Fulltext.length) {
-            $('#getnumautosop').removeAttr("disabled").html('Người may mắn thứ ' + giainhi.click);
+            $('#getnumautosop').removeAttr("disabled").html('Quay số');
+            // $('#getnumautosop').removeAttr("disabled").html('Người may mắn thứ ' + giainhi.click);
         } else {
             $('#getnumautosop').hide()
         }

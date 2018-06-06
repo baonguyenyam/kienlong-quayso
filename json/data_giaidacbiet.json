@@ -6,7 +6,7 @@
     "bgimg": "./img/bg-giaidacbiet.jpg",
     "imgs": "./img/xe.png",
     "press": 3,
-    "autostop": false,
+    "autostop": true,
     "autotime": 6000,
     "demo": false
     }

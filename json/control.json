@@ -1,0 +1,13 @@
+{
+	"data_searchresult": {
+		"lists": ["1;Gi?i d?c bi?t;1", "2;Gi?i nh?t;2", "16;Gi?i nhì;3", "17;Gi?i khuy?n khích;4"],
+		"settings": "PrizeStructureID,Name,LoaiMH",
+		"ltr": false,
+        "bgimg": "./img/ketqua-none.png",
+		"imgs": "./img/ketqua-none.png",
+		"press": 0,
+		"step": 0,
+		"autostop": false,
+		"autotime": 0
+	}
+}

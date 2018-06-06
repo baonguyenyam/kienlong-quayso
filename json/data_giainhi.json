@@ -1,6 +1,6 @@
 {
     "data_giainhi": {
-    "lists": ["1183;KL0751;true;Qu?c Su;713586361;689530688843;Dia chi test;KL0751", "1184;KL0446;true;Xoài;517978745;677220736202;Dia chi test;KL0446", "1185;KL0045;true;L?c Ðà;872179982;326494167877;Dia chi test;KL0045"],
+    "lists": ["1183;KL0751;false;Qu?c Su;713586361;689530688843;Dia chi test;KL0751", "1184;KL0446;false;Xoài;517978745;677220736202;Dia chi test;KL0446", "1185;KL0045;false;L?c Ðà;872179982;326494167877;Dia chi test;KL0045"],
     "settings": "WinnerID,TicketCode,IsShow,FullName,BankNumber,IdentityCard,Address,TicketCode",
     "ltr": true,
     "bgimg": "./img/giainhi.png",

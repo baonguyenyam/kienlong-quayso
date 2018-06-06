@@ -45,7 +45,7 @@ gulp.task('vendor', function () {
     '!./node_modules/font-awesome/*.{txt,json,md}'
   ])
     .pipe(gulp.dest('./vendor/font-awesome'))
-    
+
   gulp.src([
     './node_modules/popper.js/dist/**/*'
   ])
@@ -138,6 +138,7 @@ gulp.task('js:concat', function () {
     'vendor/bootstrap/js/bootstrap.bundle.min.js',
     'vendor/jquery-easing/jquery.easing.min.js',
     'vendor/offline/offline.min.js',
+    'vendor/kAnimation.min.js',
     './js/congrat.js',
     './js/creative.js',
 

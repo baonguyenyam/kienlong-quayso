@@ -25,7 +25,14 @@ function victoryStep() {
     $('.chucmung').find('p.text-muted').html(giaidacbiet.Fulltext[5]);
     $('.chucmung').find('p.text-muted-2').html(giaidacbiet.Fulltext[6]);
     $('.quatang').find('img').attr('src', giaidacbiet.imgs);
-    $('.chucmung, .quatang').show();
+	$('.chucmung, .quatang').show();
+	$('.click').kAnimation({
+		ClassName: 'animated fadeIn',
+		Delay: 1000,
+		Forever: false,
+		DelayForever: 100
+	});
+
     setTimeout(function () {
         $('body').addClass('phaono')
         $('#congrats').show()

@@ -22,7 +22,7 @@ var AppURL = {
 	giai_nhat_update: '/?p=',
 	giai_nhi: './json/data_giainhi.json',
 	giai_nhi_update: '/?p=',
-	kiemtra: "./json/.json",
+	kiemtra: "./json/data_searchresult.json",
 	main: "./json/control.json",
 	index: "./json/index.json",
 	results: "./json/data_results.json"

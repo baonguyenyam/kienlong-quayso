@@ -1,6 +1,6 @@
 {
     "data_giaidacbiet": {
-    "lists": ["1386;KL0385;true;Duy Phuong;466087301;475177205178;Dia chi test;KL0385"],
+    "lists": ["1386;KL0385;false;Duy Phuong;466087301;475177205178;Dia chi test;KL0385"],
     "settings": "WinnerID,TicketCode,IsShow,FullName,BankNumber,IdentityCard,Address,TicketCode",
     "ltr": true,
     "bgimg": "./img/bg-giaidacbiet.jpg",

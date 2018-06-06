@@ -1,12 +1,13 @@
 {
     "data_giainhi": {
-    "lists": ["78907D;NGUYEN VAN THOI;MSDT: 78907D;KIENLONG BANK DA NANG;9879789798","GHYUJK;NGUYEN VAN THOI;123 Nguyen Van Troi;9879789798",
-        "KKKKKK;NGUYEN VAN THOI;123 Nguyen Van Troi;456789"],
-    "settings": ["key,name,address,mobile"],
+    "lists": ["1183;KL0751;true;Qu?c Su;713586361;689530688843;Dia chi test;KL0751", "1184;KL0446;true;Xoài;517978745;677220736202;Dia chi test;KL0446", "1185;KL0045;true;L?c Ðà;872179982;326494167877;Dia chi test;KL0045"],
+    "settings": "WinnerID,TicketCode,IsShow,FullName,BankNumber,IdentityCard,Address,TicketCode",
+    "ltr": true,
     "bgimg": "./img/giainhi.png",
     "imgs": "",
+    "press": 1,
+    "step": 3,
     "autostop": false,
-    "autotime": 6000,
-    "demo": false
+    "autotime": 4000
     }
 }

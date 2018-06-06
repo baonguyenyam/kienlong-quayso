@@ -288,6 +288,18 @@ audio {
   font-size: 2rem;
 }
 
+.chucmung .text-muted-2,
+.chucmung1 .text-muted-2 {
+  margin-bottom: 0;
+  color: #007476 !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: .25rem;
+  white-space: nowrap;
+  line-height: 2.5rem;
+  font-size: 2rem;
+}
+
 .chucmung img,
 .chucmung1 img {
   max-width: 300px;
@@ -690,6 +702,9 @@ audio {
   font-size: 1.1rem;
   margin-bottom: 0;
   text-transform: uppercase;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 #giaikhuyenkhich .wheels #wheels .boxnone .wheel h2 span {
@@ -700,6 +715,12 @@ audio {
 
 #giaikhuyenkhich .wheels #wheels .boxnone .wheel .item {
   font-size: .8rem;
+  overflow: hidden;
+}
+
+#giaikhuyenkhich .wheels #wheels .boxnone .wheel .item p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
   overflow: hidden;
 }
 
@@ -736,6 +757,12 @@ audio {
   text-transform: uppercase;
   font-size: .8rem;
   font-weight: 200;
+}
+
+#giaikhuyenkhich .wheels #wheels .boxnone.showlist .wheel .item p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 #giaikhuyenkhich .wheels #wheels .boxnone.showlist .wheel .item > p {
@@ -952,7 +979,7 @@ audio {
   margin: .5rem 0;
 }
 
-#giaidacbiet .chucmung .cmkh, #giaidacbiet .chucmung h3, #giainhat .chucmung .cmkh, #giainhat .chucmung h3, #giainhi .chucmung .cmkh, #giainhi .chucmung h3 {
+#giainhat .chucmung .cmkh, #giainhat .chucmung h3, #giainhi .chucmung .cmkh, #giainhi .chucmung h3 {
   color: #ea3f33;
   text-shadow: -2px 0 #fff, 0 2px #fff, 2px 0 #fff, 0 -2px #fff;
 }

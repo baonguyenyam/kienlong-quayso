@@ -48,15 +48,15 @@ var siteSetting = {
     imgNewH = ((igh * PerCent) / 100),
     currentScreen = ''
 
-    // var abc = 
+    // var abc =
 $('.btnquayso img').width(($('.btnquayso img').width() * PerCent) / 100)
 
 function callValue(el) {
     $('#loading').removeClass('done').removeClass('finished')
-    currentScreen = el 
+    currentScreen = el
     toggleCurrentScreen(el)
     $.ajax({
-        url: "/data_settings_" + el + ".json",
+        url: "/json/data_settings_" + el + ".json",
         type: "GET",
         dataType: "json",
         cache: !0,

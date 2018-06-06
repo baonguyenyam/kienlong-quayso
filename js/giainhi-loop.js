@@ -26,6 +26,7 @@ function victoryStep() {
     $('.chucmung').find('h3').html(giainhi.Fulltext[giainhi.click - 2].split(';')[3]);
     $('.chucmung').find('p.add').html(giainhi.Fulltext[giainhi.click - 2].split(';')[4]);
     $('.chucmung').find('p.text-muted').html(giainhi.Fulltext[giainhi.click - 2].split(';')[5]);
+    $('.chucmung').find('p.text-muted-2').html(giainhi.Fulltext[giainhi.click - 2].split(';')[6]);
     $('.quatang').find('img').attr('src', giainhi.imgs);
     $('.chucmung, .quatang').show();
 
@@ -261,9 +262,9 @@ function doSearch() {
         var newlist = '<tr>' +
         '<td>' + (index + 1) + '</td>' +
         '<td>' + tmpData[index].split(';')[3] + '</td>' +
-        '<td>' + tmpData[index].split(';')[1] + '</td>' +
-        '<td>' + tmpData[index].split(';')[5] + '</td>' +
         '<td>' + tmpData[index].split(';')[4] + '</td>' +
+        '<td>' + tmpData[index].split(';')[5] + '</td>' +
+        '<td>' + tmpData[index].split(';')[6] + '</td>' +
         '<tr>';
         buildList.push(newlist)
     }

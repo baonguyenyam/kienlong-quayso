@@ -20,8 +20,9 @@ function updateUerWin(e) {
 
 function victoryStep() {
     $('.chucmung').find('h3').html(giainhat.Fulltext[3]);
-    $('.chucmung').find('p.addok').html(giainhat.Fulltext[4]);
+    $('.chucmung').find('p.add').html(giainhat.Fulltext[4]);
     $('.chucmung').find('p.text-muted').html(giainhat.Fulltext[5]);
+    $('.chucmung').find('p.text-muted-2').html(giainhat.Fulltext[6]);
     $('.quatang').find('img').attr('src', giainhat.imgs);
     $('.chucmung, .quatang').show();
 

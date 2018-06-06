@@ -1,8 +1,8 @@
 {
     "data_giaidacbiet": {
-    "lists": ["BD3PGL;BD3PGL;NGUYEN VAN THOI;PHẠM NGUYỄN BẢO NGUYÊN;MSDT: BD3PGL;KIEN LONG BANK GO CONG;KIENLONG BANK DA NANG"],
-    "settings": ["key,name,address,mobile"],
-    "ltr": false,
+    "lists": ["1386;KL0385;true;Duy Phuong;466087301;475177205178;Dia chi test;KL0385"],
+    "settings": "WinnerID,TicketCode,IsShow,FullName,BankNumber,IdentityCard,Address,TicketCode",
+    "ltr": true,
     "bgimg": "./img/bg-giaidacbiet.jpg",
     "imgs": "./img/xe.png",
     "press": 3,

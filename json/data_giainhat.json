@@ -1,15 +1,13 @@
 {
     "data_giainhat": {
-    "lists": [
-        "78907D;NGUYEN VAN THOI;MSDT: 78907D;KIENLONG BANK DA NANG"
-    ],
-    "settings": ["key,name,address,mobile"],
-    "ltr": false,
+    "lists": ["1182;KL0586;false;Vi?t Huong;717991486;911469264248;Dia chi test;KL0586"],
+    "settings": "WinnerID,TicketCode,IsShow,FullName,BankNumber,IdentityCard,Address,TicketCode",
+    "ltr": true,
     "bgimg": "./img/bg-giainhat.jpg",
     "imgs": "./img/vang.png",
-    "press": 2,
-    "autostop": false,
-    "autotime": 6000,
-    "demo": false
+    "press": 1,
+    "step": 1,
+    "autostop": true,
+    "autotime": 5000
     }
 }

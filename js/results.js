@@ -46,13 +46,12 @@ function putData(e, w, g) {
 	buildListResults.push('<tr><td colspan="5" class="namegiai">'+g+'</td></tr>')
 	for (var index = 0; index < e.length; index++) {
 		var dat = e[index].split(';')
-		var newlist = '<tr>' +
-			'<td>' + (index + 1) + '</td>' +
-			'<td>' + dat[3] + '</td>' +
-			'<td>' + dat[4] + '</td>' +
-			'<td>' + dat[5] + '</td>' +
-			'<td>' + dat[6] + '</td>' +
-			'<tr>';
+		var newnoneList = []
+		newnoneList.push('<td>' + (index + 1) + '</td>')
+		for (var tem = 0; tem < (results.columnTitle.length - 3); tem++) {
+			newnoneList.push('<td>' + dat[tem+3] + '</td>')
+		}
+		var newlist = '<tr>' + newnoneList + '<tr>';
 		buildListResults.push(newlist)
 	}
 }

@@ -11,6 +11,7 @@ var giaikhuyenkhich = {
     animation: 4,
     result: []
 }
+var buildListHeader = []
 
 function updateUerWin(e) {
     var updateLists = []
@@ -44,7 +45,8 @@ function getData() {
             giaikhuyenkhich.step = tmpData.step
             giaikhuyenkhich.autostop = tmpData.autostop
             giaikhuyenkhich.lists = tmpData.lists
-            giaikhuyenkhich.imgs = tmpData.imgs
+			giaikhuyenkhich.imgs = tmpData.imgs
+			giaikhuyenkhich.columnTitle = tmpData.columnTitle.split(',')
             updateUerWin(giaikhuyenkhich.lists)
             getPerLoop(giaikhuyenkhich.lists, giaikhuyenkhich.step)
             if (tmpData.bgimg) {
@@ -265,20 +267,28 @@ function forList(a) {
     return $('#wheels .boxnone').html(lists)
 }
 
+function buildHeader() {
+	buildListHeader.push('<th scope="col">STT</th>')
+	for (var index = 0; index < (giaikhuyenkhich.columnTitle.length - 3); index++) {
+		buildListHeader.push('<th scope="col">' + giaikhuyenkhich.columnTitle[index+3] + '</th>')
+	}
+}
+
 function doSearch() {
     var tmpData = giaikhuyenkhich.text;
     var buildList = []
     for (var index = 0; index < tmpData.length; index++) {
-        var newlist = '<tr>' +
-            '<td>' + (index + 1) + '</td>' +
-            '<td>' + tmpData[index].split(';')[3] + '</td>' +
-            '<td>' + tmpData[index].split(';')[4] + '</td>' +
-            '<td>' + tmpData[index].split(';')[5] + '</td>' +
-            '<td>' + tmpData[index].split(';')[6] + '</td>' +
-            '<tr>';
+		var newnoneList = []
+		newnoneList.push('<td>' + (index + 1) + '</td>')
+		for (var tem = 0; tem < (giaikhuyenkhich.columnTitle.length - 3); tem++) {
+			newnoneList.push('<td>' + tmpData[index].split(';')[tem+3] + '</td>')
+		}
+        var newlist = '<tr>' + newnoneList + '<tr>';
+
         buildList.push(newlist)
-    }
-    $('.table-kienlong tbody').append(buildList)
+	}
+	$('.table-kienlong thead tr').html(buildListHeader)
+    $('.table-kienlong tbody').html(buildList)
     $('.resultbox').show()
     $('.getloading').hide()
 }
@@ -286,6 +296,7 @@ function doSearch() {
 
 function ketqua() {
     $('.wheels, .text-kienlong, .boxnone').hide()
-    $('.getloading').show()
+	$('.getloading').show()
+	buildHeader()
     doSearch()
 }

@@ -20,10 +20,15 @@ function updateUerWin(e) {
 }
 
 function victoryStep() {
-    $('.chucmung').find('h3').html(giaidacbiet.Fulltext[3]);
-    $('.chucmung').find('p.add').html(giaidacbiet.Fulltext[4]);
-    $('.chucmung').find('p.text-muted').html(giaidacbiet.Fulltext[5]);
-    $('.chucmung').find('p.text-muted-2').html(giaidacbiet.Fulltext[6]);
+	$('.chucmung').find('h3').html(giaidacbiet.Fulltext[3]);
+	var listR = []
+	for (var index = 0; index < (giaidacbiet.columnTitle.length - 4); index++) {
+		if(giaidacbiet.displayOnResult[index+4] === 'true') {
+			listR.push('<p class="text-muted click">' + giaidacbiet.Fulltext[index+4] + '</p>')
+		}
+	}
+	$('.chucmung .looptext').html(listR);
+
     $('.quatang').find('img').attr('src', giaidacbiet.imgs);
 	$('.chucmung, .quatang').show();
 	$('.click').kAnimation({
@@ -66,7 +71,9 @@ function getData() {
             giaidacbiet.autotime = tmpData.autotime
             giaidacbiet.imgs = tmpData.imgs
             giaidacbiet.autostop = tmpData.autostop
-            giaidacbiet.press = tmpData.press
+			giaidacbiet.press = tmpData.press
+			giaidacbiet.columnTitle = tmpData.columnTitle.split(',')
+			giaidacbiet.displayOnResult = tmpData.displayOnResult.toLowerCase().split(',')
             if (giaidacbiet.passed === 'true') {
                 victoryStep()
                 passed()

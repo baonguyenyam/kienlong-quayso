@@ -19,9 +19,17 @@ function updateUerWin(e) {
 
 function victoryStep() {
 	$('.chucmung').find('h3').html(giainhat.Fulltext[3]);
-	$('.chucmung').find('p.add').html(giainhat.Fulltext[4]);
-	$('.chucmung').find('p.text-muted').html(giainhat.Fulltext[5]);
-	$('.chucmung').find('p.text-muted-2').html(giainhat.Fulltext[6]);
+	$('.chucmung').find('h3').html(giainhat.Fulltext[3]);
+	var listR = []
+	for (var index = 0; index < (giainhat.columnTitle.length - 4); index++) {
+		if(giainhat.displayOnResult[index+4] === 'true') {
+			listR.push('<p class="text-muted click">' + giainhat.Fulltext[index+4] + '</p>')
+		}
+	}
+	$('.chucmung .looptext').html(listR);
+	// $('.chucmung').find('p.add').html(giainhat.Fulltext[4]);
+	// $('.chucmung').find('p.text-muted').html(giainhat.Fulltext[5]);
+	// $('.chucmung').find('p.text-muted-2').html(giainhat.Fulltext[6]);
 	$('.quatang').find('img').attr('src', giainhat.imgs);
 	$('.chucmung, .quatang').show();
 
@@ -66,6 +74,8 @@ function getData() {
 			giainhat.autostop = tmpData.autostop
 			giainhat.press = tmpData.press
 			giainhat.imgs = tmpData.imgs
+			giainhat.columnTitle = tmpData.columnTitle.split(',')
+			giainhat.displayOnResult = tmpData.displayOnResult.toLowerCase().split(',')
 			if (giainhat.passed === 'true') {
 				victoryStep()
 				passed()

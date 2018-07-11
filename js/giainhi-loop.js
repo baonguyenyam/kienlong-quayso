@@ -10,6 +10,7 @@ var giainhi = {
     animation: 3.5,
     result: []
 }
+var buildListHeader = []
 
 function updateUerWin(e) {
     $.ajax({
@@ -23,10 +24,15 @@ function updateUerWin(e) {
 }
 
 function victoryStep() {
-    $('.chucmung').find('h3').html(giainhi.Fulltext[giainhi.click - 2].split(';')[3]);
-    $('.chucmung').find('p.add').html(giainhi.Fulltext[giainhi.click - 2].split(';')[4]);
-    $('.chucmung').find('p.text-muted').html(giainhi.Fulltext[giainhi.click - 2].split(';')[5]);
-    $('.chucmung').find('p.text-muted-2').html(giainhi.Fulltext[giainhi.click - 2].split(';')[6]);
+	$('.chucmung').find('h3').html(giainhi.Fulltext[giainhi.click - 2].split(';')[3]);
+
+	var listR = []
+	for (var index = 0; index < (giainhi.columnTitle.length - 4); index++) {
+		if(giainhi.displayOnResult[index+4] === 'true') {
+			listR.push('<p class="text-muted click">' + giainhi.Fulltext[giainhi.click - 2].split(';')[index+4] + '</p>')
+		}
+	}
+	$('.chucmung .looptext').html(listR);
     $('.quatang').find('img').attr('src', giainhi.imgs);
 	$('.chucmung, .quatang').show();
 
@@ -74,7 +80,10 @@ function getData() {
             // giainhi.autostop = true
             giainhi.autostop = tmpData.autostop
             giainhi.imgs = tmpData.imgs
-            giainhi.passed = tmpData.lists[0].split(';')[2];
+			giainhi.passed = tmpData.lists[0].split(';')[2];
+			giainhi.columnTitle = tmpData.columnTitle.split(',')
+			giainhi.displayOnResult = tmpData.displayOnResult.toLowerCase().split(',')
+			giainhi.displayOnTable = tmpData.displayOnTable.toLowerCase().split(',')
             if (giainhi.passed === 'true') {
                 giainhi.click++
                 $('#getnumautosop').removeAttr("disabled").html('Quay số');
@@ -262,19 +271,32 @@ function geStopSlot(a, b, c, result) {
     }
 }
 
+function buildHeader() {
+	buildListHeader.push('<th scope="col">STT</th>')
+	for (var index = 0; index < (giainhi.columnTitle.length - 3); index++) {
+		if(giainhi.displayOnTable[index+3] === 'true') {
+			buildListHeader.push('<th scope="col">' + giainhi.columnTitle[index+3] + '</th>')
+		}
+	}
+}
+
 function doSearch() {
     var tmpData = giainhi.text;
     var buildList = []
     for (var index = 0; index < tmpData.length; index++) {
-        var newlist = '<tr>' +
-        '<td>' + (index + 1) + '</td>' +
-        '<td>' + tmpData[index].split(';')[3] + '</td>' +
-        '<td>' + tmpData[index].split(';')[4] + '</td>' +
-        '<td>' + tmpData[index].split(';')[5] + '</td>' +
-        '<td>' + tmpData[index].split(';')[6] + '</td>' +
-        '<tr>';
+
+
+		var newnoneList = []
+		newnoneList.push('<td>' + (index + 1) + '</td>')
+		for (var tem = 0; tem < (giainhi.columnTitle.length - 3); tem++) {
+			if(giainhi.displayOnTable[tem+3] === 'true') {
+				newnoneList.push('<td>' + tmpData[index].split(';')[tem+3] + '</td>')
+			}
+		}
+		var newlist = '<tr>' + newnoneList + '<tr>';
         buildList.push(newlist)
     }
+    $('.table-kienlong thead tr').append(buildListHeader)
     $('.table-kienlong tbody').append(buildList)
     $('.resultbox').show()
     $('.getloading').hide()
@@ -283,6 +305,7 @@ function doSearch() {
 
 function ketqua() {
     $('#lists, .text-kienlong, .boxnone').hide()
-    $('.getloading').show()
+	$('.getloading').show()
+	buildHeader()
     doSearch()
 }

@@ -340,8 +340,7 @@ audio {
 
 .resultbox {
   max-height: 385px;
-  overflow: scroll;
-  border-bottom: 1px solid #fff;
+  overflow: auto;
 }
 
 .resultbox .table {

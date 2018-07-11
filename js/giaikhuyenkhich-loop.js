@@ -272,9 +272,7 @@ function forList(a) {
 			}
 		}
 
-		// if(giaikhuyenkhich.displayOnResult[index+3] === 'true') {
-			lists.push('<div class="wheel"><div class="item"><h2><span>' + (index + 1) + '.</span>' + item[3] + '</h2>' + listR + '</div></div>')
-		// }
+		lists.push('<div class="wheel"><div class="item"><h2><span>' + (index + 1) + '.</span>' + item[3] + '</h2>' + listR + '</div></div>')
 
     }
     return $('#wheels .boxnone').html(lists)

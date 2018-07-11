@@ -126,7 +126,7 @@ var AppURL = {
 	giai_nhi_update: FULL_URL + 'AwardService.aspx?p=',
 	kiemtra: FULL_URL + "AwardService.aspx?method=",
 	main: FULL_URL + "AwardService.aspx?method=Control",
-	index: "./json/index.json",
+	index: FULL_URL + "AwardService.aspx?method=index",
 	results: FULL_URL + "AwardService.aspx?method=data_results"
 };
 // var AppURL = {

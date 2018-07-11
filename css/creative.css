@@ -1,11 +1,10 @@
 @import url(../vendor/offline/themes/offline-theme-default.css);
 @import url(../css/offline-language-vietnam.css);
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&subset=vietnamese");
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&subset=vietnamese");
 html, body {
   height: 100%;
   width: 100%;
-  font-family: 'Roboto', serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 html .phaono, body .phaono {
@@ -87,7 +86,6 @@ nav {
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font-family: Arial;
   font-size: 1rem;
   padding: 6px 24px;
   text-decoration: none;
@@ -115,7 +113,6 @@ nav {
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font-family: Arial;
   font-size: 1rem;
   padding: 6px 24px;
   text-decoration: none;
@@ -164,7 +161,6 @@ nav {
 #title {
   transform-origin: 50% 50%;
   font-size: 50px;
-  font-family: 'Sigmar One', cursive;
   cursor: pointer;
   z-index: 2;
   position: absolute;
@@ -1023,7 +1019,6 @@ audio {
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font-family: Arial;
   padding: .2rem;
   text-decoration: none;
   text-shadow: 0px 1px 0px #015657;

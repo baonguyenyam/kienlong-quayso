@@ -2,6 +2,7 @@ var results = {
     animation: 3.5
 }
 var buildListResults = []
+var buildListHeader = []
 
 
 function getData() {
@@ -17,13 +18,16 @@ function getData() {
             results.giainhi = tmpData.giainhi
             results.giaikhuyenkhich = tmpData.giaikhuyenkhich
 			results.bgimg = data.responseJSON.bgimg
+			results.data_titles = data.responseJSON.data_titles
+			results.columnTitle = data.responseJSON.columnTitle.split(',')
             if (results.bgimg) {
                 setTimeout(function () {
                     $('body').css({
                         "background-image": "url(" + results.bgimg + ")"
                     })
                 }, 200);
-            }
+			}
+			buildHeader()
             getGiaiThuong()
         }
     })
@@ -31,8 +35,15 @@ function getData() {
 
 getData()
 
+function buildHeader() {
+	buildListHeader.push('<th scope="col">STT</th>')
+	for (var index = 0; index < (results.columnTitle.length - 3); index++) {
+		buildListHeader.push('<th scope="col">' + results.columnTitle[index+3] + '</th>')
+	}
+}
+
 function putData(e, w, g) {
-	buildListResults.push('<tr><td colspan="5" class="namegiai">'+g+' - ' + e.length + ' giải</td></tr>')
+	buildListResults.push('<tr><td colspan="5" class="namegiai">'+g+'</td></tr>')
 	for (var index = 0; index < e.length; index++) {
 		var dat = e[index].split(';')
 		var newlist = '<tr>' +
@@ -48,11 +59,12 @@ function putData(e, w, g) {
 
 
 function getGiaiThuong() {
-    putData(results.giaidacbiet, 'giaidacbiet', 'Giải đặc biệt')
-    putData(results.giainhat, 'giainhat', 'Giải nhất')
-    putData(results.giainhi, 'giainhi', 'Giải nhì')
-	putData(results.giaikhuyenkhich, 'giaikhuyenkhich', 'Giải khuyến khích')
-	$('#lists-op table tbody').append(buildListResults)
+    putData(results.giaidacbiet, 'giaidacbiet', results.data_titles.giaidacbiet)
+    putData(results.giainhat, 'giainhat', results.data_titles.giainhat)
+    putData(results.giainhi, 'giainhi', results.data_titles.giainhi)
+	putData(results.giaikhuyenkhich, 'giaikhuyenkhich', results.data_titles.giaikhuyenkhich)
+	$('#lists-op table thead tr').html(buildListHeader)
+	$('#lists-op table tbody').html(buildListResults)
 }
 
 // setInterval(function() {

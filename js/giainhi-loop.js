@@ -284,8 +284,6 @@ function doSearch() {
     var tmpData = giainhi.text;
     var buildList = []
     for (var index = 0; index < tmpData.length; index++) {
-
-
 		var newnoneList = []
 		newnoneList.push('<td>' + (index + 1) + '</td>')
 		for (var tem = 0; tem < (giainhi.columnTitle.length - 3); tem++) {

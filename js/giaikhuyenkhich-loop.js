@@ -47,6 +47,8 @@ function getData() {
             giaikhuyenkhich.lists = tmpData.lists
 			giaikhuyenkhich.imgs = tmpData.imgs
 			giaikhuyenkhich.columnTitle = tmpData.columnTitle.split(',')
+			giaikhuyenkhich.displayOnResult = tmpData.displayOnResult.toLowerCase().split(',')
+			giaikhuyenkhich.displayOnTable = tmpData.displayOnTable.toLowerCase().split(',')
             updateUerWin(giaikhuyenkhich.lists)
             getPerLoop(giaikhuyenkhich.lists, giaikhuyenkhich.step)
             if (tmpData.bgimg) {
@@ -260,8 +262,19 @@ function forList(a) {
     var lists = []
     var reli = a
     for (var index = 0; index < reli.length; index++) {
-        var item = reli[index].split(';')
-        lists.push('<div class="wheel"><div class="item"><h2><span>' + (index + 1) + '.</span>' + item[3] + '</h2><p>' + item[4] + '</p><p>' + item[5] + '</p><p>' + item[6] + '</p></div></div>')
+		var item = reli[index].split(';')
+
+
+		var listR = []
+		for (var op = 0; op < (giaikhuyenkhich.columnTitle.length - 4); op++) {
+			if(giaikhuyenkhich.displayOnResult[op+4] === 'true') {
+				listR.push('<p>' + item[op+4] + '</p>')
+			}
+		}
+
+		// if(giaikhuyenkhich.displayOnResult[index+3] === 'true') {
+			lists.push('<div class="wheel"><div class="item"><h2><span>' + (index + 1) + '.</span>' + item[3] + '</h2>' + listR + '</div></div>')
+		// }
 
     }
     return $('#wheels .boxnone').html(lists)
@@ -270,7 +283,9 @@ function forList(a) {
 function buildHeader() {
 	buildListHeader.push('<th scope="col">STT</th>')
 	for (var index = 0; index < (giaikhuyenkhich.columnTitle.length - 3); index++) {
-		buildListHeader.push('<th scope="col">' + giaikhuyenkhich.columnTitle[index+3] + '</th>')
+		if(giaikhuyenkhich.displayOnTable[index+3] === 'true') {
+			buildListHeader.push('<th scope="col">' + giaikhuyenkhich.columnTitle[index+3] + '</th>')
+		}
 	}
 }
 
@@ -281,9 +296,11 @@ function doSearch() {
 		var newnoneList = []
 		newnoneList.push('<td>' + (index + 1) + '</td>')
 		for (var tem = 0; tem < (giaikhuyenkhich.columnTitle.length - 3); tem++) {
-			newnoneList.push('<td>' + tmpData[index].split(';')[tem+3] + '</td>')
+			if(giaikhuyenkhich.displayOnTable[tem+3] === 'true') {
+				newnoneList.push('<td>' + tmpData[index].split(';')[tem+3] + '</td>')
+			}
 		}
-        var newlist = '<tr>' + newnoneList + '<tr>';
+		var newlist = '<tr>' + newnoneList + '<tr>';
 
         buildList.push(newlist)
 	}

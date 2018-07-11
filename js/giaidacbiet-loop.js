@@ -24,7 +24,7 @@ function victoryStep() {
 	var listR = []
 	for (var index = 0; index < (giaidacbiet.columnTitle.length - 4); index++) {
 		if(giaidacbiet.displayOnResult[index+4] === 'true') {
-			listR.push('<p class="text-muted click">' + giaidacbiet.Fulltext[index+4] + '</p>')
+			listR.push('<p class="text-muted click">' + giaidacbiet.titleOnResult[index+4] + giaidacbiet.Fulltext[index+4] + '</p>')
 		}
 	}
 	$('.chucmung .looptext').html(listR);
@@ -74,6 +74,7 @@ function getData() {
 			giaidacbiet.press = tmpData.press
 			giaidacbiet.columnTitle = tmpData.columnTitle.split(',')
 			giaidacbiet.displayOnResult = tmpData.displayOnResult.toLowerCase().split(',')
+			giaidacbiet.titleOnResult = tmpData.titleOnResult.toLowerCase().split(',')
             if (giaidacbiet.passed === 'true') {
                 victoryStep()
                 passed()

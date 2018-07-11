@@ -29,7 +29,7 @@ function victoryStep() {
 	var listR = []
 	for (var index = 0; index < (giainhi.columnTitle.length - 4); index++) {
 		if(giainhi.displayOnResult[index+4] === 'true') {
-			listR.push('<p class="text-muted click">' + giainhi.Fulltext[giainhi.click - 2].split(';')[index+4] + '</p>')
+			listR.push('<p class="text-muted click">' + giainhi.titleOnResult[index+4] + giainhi.Fulltext[giainhi.click - 2].split(';')[index+4] + '</p>')
 		}
 	}
 	$('.chucmung .looptext').html(listR);
@@ -84,6 +84,7 @@ function getData() {
 			giainhi.columnTitle = tmpData.columnTitle.split(',')
 			giainhi.displayOnResult = tmpData.displayOnResult.toLowerCase().split(',')
 			giainhi.displayOnTable = tmpData.displayOnTable.toLowerCase().split(',')
+			giainhi.titleOnResult = tmpData.titleOnResult.toLowerCase().split(',')
             if (giainhi.passed === 'true') {
                 giainhi.click++
                 $('#getnumautosop').removeAttr("disabled").html('Quay số');

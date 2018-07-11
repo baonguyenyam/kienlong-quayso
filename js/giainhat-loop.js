@@ -23,7 +23,7 @@ function victoryStep() {
 	var listR = []
 	for (var index = 0; index < (giainhat.columnTitle.length - 4); index++) {
 		if(giainhat.displayOnResult[index+4] === 'true') {
-			listR.push('<p class="text-muted click">' + giainhat.Fulltext[index+4] + '</p>')
+			listR.push('<p class="text-muted click">' + giainhat.titleOnResult[index+4] + giainhat.Fulltext[index+4] + '</p>')
 		}
 	}
 	$('.chucmung .looptext').html(listR);
@@ -76,6 +76,7 @@ function getData() {
 			giainhat.imgs = tmpData.imgs
 			giainhat.columnTitle = tmpData.columnTitle.split(',')
 			giainhat.displayOnResult = tmpData.displayOnResult.toLowerCase().split(',')
+			giainhat.titleOnResult = tmpData.titleOnResult.toLowerCase().split(',')
 			if (giainhat.passed === 'true') {
 				victoryStep()
 				passed()

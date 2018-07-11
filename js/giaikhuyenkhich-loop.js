@@ -49,6 +49,7 @@ function getData() {
 			giaikhuyenkhich.columnTitle = tmpData.columnTitle.split(',')
 			giaikhuyenkhich.displayOnResult = tmpData.displayOnResult.toLowerCase().split(',')
 			giaikhuyenkhich.displayOnTable = tmpData.displayOnTable.toLowerCase().split(',')
+			giaikhuyenkhich.titleOnResult = tmpData.titleOnResult.split(',')
             updateUerWin(giaikhuyenkhich.lists)
             getPerLoop(giaikhuyenkhich.lists, giaikhuyenkhich.step)
             if (tmpData.bgimg) {
@@ -268,7 +269,7 @@ function forList(a) {
 		var listR = ''
 		for (var op = 0; op < (giaikhuyenkhich.columnTitle.length - 4); op++) {
 			if(giaikhuyenkhich.displayOnResult[op+4] === 'true') {
-				listR += '<p>' + item[op+4] + '</p>'
+				listR += '<p>' + giaikhuyenkhich.titleOnResult[op+4] + item[op+4] + '</p>'
 			}
 		}
 

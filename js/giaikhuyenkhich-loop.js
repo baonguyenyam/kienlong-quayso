@@ -265,10 +265,10 @@ function forList(a) {
 		var item = reli[index].split(';')
 
 
-		var listR = []
+		var listR = ''
 		for (var op = 0; op < (giaikhuyenkhich.columnTitle.length - 4); op++) {
 			if(giaikhuyenkhich.displayOnResult[op+4] === 'true') {
-				listR.push('<p>' + item[op+4] + '</p>')
+				listR += '<p>' + item[op+4] + '</p>'
 			}
 		}
 

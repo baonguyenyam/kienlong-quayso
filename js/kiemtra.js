@@ -31,6 +31,14 @@ function doSearch(a) {
             var tmpData = data.responseJSON.data_searchresult;
 			timkiem.columnTitle = tmpData.columnTitle.split(',')
 			timkiem.lists = tmpData.lists
+			var res = data.responseJSON.data_searchresult;
+            if (res.imgs) {
+                setTimeout(function () {
+                    $('body').css({
+                        "background-image": "url(" + res.imgs + ")"
+                    })
+                }, 200);
+            }
 			buildHeader()
             buildLists(timkiem.lists)
         }

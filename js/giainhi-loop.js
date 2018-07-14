@@ -208,7 +208,8 @@ function getRandomKey() {
 function countDown() {
     var timeleftKey = giainhi.autotime / 1000;
     var m = document.getElementById('getnumautosop');
-    m.innerHTML = "Đang quay - (" + timeleftKey + ")";
+    m.innerHTML = "Đang quay";
+    // m.innerHTML = "Đang quay - (" + timeleftKey + ")";
     var downloadTimerHey = setInterval(function () {
         timeleftKey = timeleftKey - 1;
         if (timeleftKey < 0) {
@@ -216,7 +217,8 @@ function countDown() {
             return;
         }
         document.title = "(" + timeleftKey + ") - Đang tìm người may mắn..."
-        m.innerHTML = "Đang quay - (" + timeleftKey + ")";
+        m.innerHTML = "Đang quay";
+        // m.innerHTML = "Đang quay - (" + timeleftKey + ")";
     }, 1000);
 }
 

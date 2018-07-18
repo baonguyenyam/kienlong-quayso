@@ -232,7 +232,7 @@ function gold(b) {
 
 
 function geStopSlot(a, b, c, result) {
-	if (a) {
+	if (!a) {
 		for (var u = (b - (c - 1)); u < 6; u++) {
 			$('#lists .lists:nth-child(' + (u + 1) + ') .block').html("<div class='item'>" + result[u] + "</div>").removeClass('animated')
 		}

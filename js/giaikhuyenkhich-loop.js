@@ -50,7 +50,7 @@ function getData() {
 			giaikhuyenkhich.displayOnResult = tmpData.displayOnResult.toLowerCase().split(',')
 			giaikhuyenkhich.displayOnTable = tmpData.displayOnTable.toLowerCase().split(',')
 			giaikhuyenkhich.titleOnResult = tmpData.titleOnResult.split(',')
-            updateUerWin(giaikhuyenkhich.lists)
+			// updateUerWin(giaikhuyenkhich.lists)
             getPerLoop(giaikhuyenkhich.lists, giaikhuyenkhich.step)
             if (tmpData.bgimg) {
                 setTimeout(function () {
@@ -87,7 +87,7 @@ function getPerLoop(a, b) {
                 giaikhuyenkhich.newlists[index] = a.slice((index * perList) + 1, perList + (index * perList) + 1)
             }
         }
-    }
+	}
     $('.text-kienlong-per').html('Lần quay ' + giaikhuyenkhich.click + '/' + b + '')
 
 }
@@ -113,25 +113,37 @@ var interval;
 function getRandomKey() {
     $('.timthay').show()
     var a = giaikhuyenkhich.autostop
-    getTotalWin(a)
-    $('#wheels .boxnone').removeClass('showlist').addClass('animated').css({
-        "animation-duration": ((giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1].length * giaikhuyenkhich.animation) / 100) + "s"
-    })
-
+	getTotalWin(a)
     $('.text-kienlong-per').html('Lần quay ' + giaikhuyenkhich.click + '/' + giaikhuyenkhich.step + '')
     document.title = "Đang tìm người may mắn..."
     $('.stepbystep p').html('Đang quay số...')
     $('#jackpot').get(0).play();
     var k = document.getElementById('getnum');
     var m = document.getElementById('getnumautosop');
-    forList(giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1])
+	forList(giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1])
+
+	if(giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1].length <= 10) {
+		$('#wheels .boxnone .wheel').css({
+			"flex": "0 0 100%"
+		})
+		$('#wheels .boxnone').removeClass('showlist').addClass('animated').css({
+			"animation-duration": (((giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1].length * 2) * giaikhuyenkhich.animation) / 100) + "s"
+		})
+	} else {
+		$('#wheels .boxnone .wheel').removeAttr('style')
+		$('#wheels .boxnone').removeClass('showlist').addClass('animated').css({
+			"animation-duration": ((giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1].length * giaikhuyenkhich.animation) / 100) + "s"
+		})
+	}
+
     if (a) {
         var timeper = giaikhuyenkhich.autotime / 1000
         var timeleftPer = giaikhuyenkhich.press;
         countDown()
         m.setAttribute("disabled", "disabled");
         var downloadTimerPer = setInterval(function () {
-            stopKey()
+			stopKey()
+
             --timeleftPer
             if (timeleftPer <= 0) {
                 clearInterval(downloadTimerPer);
@@ -191,7 +203,7 @@ function stopKeyEnd() {
             $('#getnumautosop').show()
         } else {
             $('#ketqua').show()
-            updateUerWin(giaikhuyenkhich.lists)
+            // updateUerWin(giaikhuyenkhich.lists)
             $('.timthay').html('Tìm thấy tổng cộng ' + giaikhuyenkhich.text.length + ' người may mắn')
         }
         $('body').removeClass('phaono')
@@ -200,6 +212,7 @@ function stopKeyEnd() {
 
 
 function stopKey() {
+	updateUerWin(giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1])
     // $('.timthay').hide()
     $('#pot').get(0).play();
     $('#wheels .boxnone').removeClass('animated')
@@ -277,7 +290,7 @@ function forList(a) {
 
 		lists.push('<div class="wheel"><div class="item"><h2><span>' + (index + 1) + '.</span>' + item[3] + '</h2>' + listR + '</div></div>')
 
-    }
+	}
     return $('#wheels .boxnone').html(lists)
 }
 

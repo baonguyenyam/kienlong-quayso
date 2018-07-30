@@ -34,7 +34,7 @@ function updateUerWin(e) {
 
 function getData() {
     $.ajax({
-        url: AppURL.giai_khuyenkhich,
+        url: AppURL.giai_khuyenkhich + getParameterByName('ID'),
         type: "GET",
         dataType: "json",
         cache: !0,
@@ -45,6 +45,8 @@ function getData() {
             giaikhuyenkhich.step = tmpData.step
             giaikhuyenkhich.autostop = tmpData.autostop
             giaikhuyenkhich.lists = tmpData.lists
+            giaikhuyenkhich.listsTop50 = tmpData.listsTop50
+            giaikhuyenkhich.columns = tmpData.columns
 			giaikhuyenkhich.imgs = tmpData.imgs
 			giaikhuyenkhich.columnTitle = tmpData.columnTitle.split(',')
 			giaikhuyenkhich.displayOnResult = tmpData.displayOnResult.toLowerCase().split(',')
@@ -122,19 +124,20 @@ function getRandomKey() {
     var m = document.getElementById('getnumautosop');
 	forList(giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1])
 
-	if(giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1].length <= 10) {
-		$('#wheels .boxnone .wheel').css({
-			"flex": "0 0 100%"
-		})
-		$('#wheels .boxnone').removeClass('showlist').addClass('animated').css({
-			"animation-duration": (((giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1].length * 2) * giaikhuyenkhich.animation) / 100) + "s"
-		})
-	} else {
-		$('#wheels .boxnone .wheel').removeAttr('style')
-		$('#wheels .boxnone').removeClass('showlist').addClass('animated').css({
-			"animation-duration": ((giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1].length * giaikhuyenkhich.animation) / 100) + "s"
-		})
-	}
+	// if(giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1].length <= 10) {
+	// 	$('#wheels .boxnone .wheel').css({
+	// 		"flex": "0 0 100%"
+	// 	})
+	// 	$('#wheels .boxnone').removeClass('showlist').addClass('animated').css({
+	// 		"animation-duration": (((giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1].length * 2) * giaikhuyenkhich.animation) / 100) + "s"
+	// 	})
+	// } else {
+	// 	$('#wheels .boxnone .wheel').removeAttr('style')
+	// }
+	$('#wheels .boxnone .wheel').attr('columns', giaikhuyenkhich.columns)
+	$('#wheels .boxnone').removeClass('showlist').addClass('animated').css({
+		"animation-duration": ((giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1].length * giaikhuyenkhich.animation) / 100) + "s"
+	})
 
     if (a) {
         var timeper = giaikhuyenkhich.autotime / 1000
@@ -276,7 +279,7 @@ function getTotalWin(a) {
 function forList(a) {
     $('.boxnonehome').remove()
     var lists = []
-    var reli = a
+    var reli = giaikhuyenkhich.listsTop50
     for (var index = 0; index < reli.length; index++) {
 		var item = reli[index].split(';')
 

@@ -31,13 +31,13 @@ function builfLists(params) {
         var element = params[index].split(';');
         var query = element[2]
         if (query == 1) {
-            $('.lists').append('<a class="btn btn-primary ml-2 mt-2 mb-1" href="./giaidacbiet.html" target="_blank">' + element[1] +'</a>')
+            $('.lists').append('<a class="btn btn-primary ml-2 mt-2 mb-1" href="./giaidacbiet.html?ID=' + element[0] +'" target="_blank">' + element[1] +'</a>')
         } else if (query == 2) {
-            $('.lists').append('<a class="btn btn-primary ml-2 mt-2 mb-1" href="./giainhat.html" target="_blank">' + element[1] +'</a>')
+            $('.lists').append('<a class="btn btn-primary ml-2 mt-2 mb-1" href="./giainhat.html?ID=' + element[0] +'" target="_blank">' + element[1] +'</a>')
         } else if (query == 3) {
-            $('.lists').append('<a class="btn btn-primary ml-2 mt-2 mb-1" href="./giainhi.html" target="_blank">' + element[1] + '</a>')
+            $('.lists').append('<a class="btn btn-primary ml-2 mt-2 mb-1" href="./giainhi.html?ID=' + element[0] +'" target="_blank">' + element[1] + '</a>')
         } else if (query == 4) {
-            $('.lists').append('<a class="btn btn-primary ml-2 mt-2 mb-1" href="./giaikhuyenkhich.html" target="_blank">' + element[1] + '</a>')
+            $('.lists').append('<a class="btn btn-primary ml-2 mt-2 mb-1" href="./giaikhuyenkhich.html?ID=' + element[0] +'" target="_blank">' + element[1] + '</a>')
         }
     }
 }

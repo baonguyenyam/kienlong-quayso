@@ -688,8 +688,34 @@ audio {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  flex: 0 0 20%;
   transition: .3s ease-in-out all;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+#giaikhuyenkhich .wheels #wheels .boxnone .wheel[columns="2"] {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+#giaikhuyenkhich .wheels #wheels .boxnone .wheel[columns="3"] {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+#giaikhuyenkhich .wheels #wheels .boxnone .wheel[columns="4"] {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+#giaikhuyenkhich .wheels #wheels .boxnone .wheel[columns="5"] {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+#giaikhuyenkhich .wheels #wheels .boxnone .wheel[columns="6"] {
+  flex: 0 0 16.66666%;
+  max-width: 16.66666%;
 }
 
 #giaikhuyenkhich .wheels #wheels .boxnone .wheel h2 {

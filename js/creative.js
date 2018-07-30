@@ -1,12 +1,12 @@
 var FULL_URL = 'http://preview6455.canhcam.com.vn/api/'
 var AppURL = {
-	giai_dacbiet: FULL_URL + 'AwardService.aspx?method=data_giaidacbiet',
+	giai_dacbiet: FULL_URL + 'AwardService.aspx?method=data_',
 	giai_dacbiet_update: FULL_URL + 'AwardService.aspx?p=',
-	giai_khuyenkhich: FULL_URL + 'AwardService.aspx?method=data_giaikhuyenkhich',
+	giai_khuyenkhich: FULL_URL + 'AwardService.aspx?method=data_',
 	giai_khuyenkhich_update: FULL_URL + 'AwardService.aspx?p=',
-	giai_nhat: FULL_URL + 'AwardService.aspx?method=data_giainhat',
+	giai_nhat: FULL_URL + 'AwardService.aspx?method=data_',
 	giai_nhat_update: FULL_URL + 'AwardService.aspx?p=',
-	giai_nhi: FULL_URL + 'AwardService.aspx?method=data_giainhi',
+	giai_nhi: FULL_URL + 'AwardService.aspx?method=data_',
 	giai_nhi_update: FULL_URL + 'AwardService.aspx?p=',
 	kiemtra: FULL_URL + "AwardService.aspx?method=",
 	main: FULL_URL + "AwardService.aspx?method=Control",
@@ -44,4 +44,14 @@ function DemoMode() {
 }
 document.onkeyup = function (t) {
 	if ((t = t || window.event).altKey && t.ctrlKey && t.shiftKey && 13 == t.which) return $("body"), alert(b64DecodeUnicode("QkFPIE5HVVlFTiAtIDA5Njk2ODk4OTMKRW1haWw6IGJhb25ndXllbnlhbUBnbWFpbC5jb20KV2ViOiBiYW9uZ3V5ZW55YW0uZ2l0aHViLmlv")), !1
+}
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }

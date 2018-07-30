@@ -68,7 +68,7 @@ function passed() {
 
 function getData() {
     $.ajax({
-        url: AppURL.giai_nhi,
+        url: AppURL.giai_nhi + getParameterByName('ID'),
         type: "GET",
         dataType: "json",
         cache: !0,

@@ -58,7 +58,7 @@ function passed() {
 
 function getData() {
     $.ajax({
-        url: AppURL.giai_dacbiet,
+        url: AppURL.giai_dacbiet + getParameterByName('ID'),
         type: "GET",
         dataType: "json",
         cache: !0,

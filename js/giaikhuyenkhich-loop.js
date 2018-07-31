@@ -1,127 +1,126 @@
 var giaikhuyenkhich = {
-    text: 'XXXXXX',
-    chars: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789',
-    lists: [],
-    lastkey: '',
-    click: 1,
-    play: 1,
-    press: 1,
-    ltr: false,
-    newlists: [],
-    animation: 4,
-    result: []
+	text: 'XXXXXX',
+	chars: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789',
+	lists: [],
+	lastkey: '',
+	click: 1,
+	play: 1,
+	press: 1,
+	ltr: false,
+	newlists: [],
+	animation: 4,
+	result: []
 }
 var buildListHeader = []
 
 function updateUerWin(e) {
-    var updateLists = []
-    for (var index = 0; index < e.length; index++) {
-        var item = e[index].split(';')[0]
-        updateLists.push(item)
-    }
-    var endList = updateLists.toString()
-    if (updateLists.length > 0) {
-        $.ajax({
-            url: AppURL.giai_khuyenkhich_update + endList,
-            type: "GET",
-            dataType: "json",
-            cache: !0,
-            complete: function (data) {
-            }
-        })
-    }
+	var updateLists = []
+	for (var index = 0; index < e.length; index++) {
+		var item = e[index].split(';')[0]
+		updateLists.push(item)
+	}
+	var endList = updateLists.toString()
+	if (updateLists.length > 0) {
+		$.ajax({
+			url: AppURL.giai_khuyenkhich_update + endList,
+			type: "GET",
+			dataType: "json",
+			cache: !0,
+			complete: function (data) {}
+		})
+	}
 }
 
 function getData() {
-    $.ajax({
-        url: AppURL.giai_khuyenkhich + getParameterByName('ID'),
-        type: "GET",
-        dataType: "json",
-        cache: !0,
-        complete: function (data) {
-            var tmpData = data.responseJSON.data_giaikhuyenkhich;
-            giaikhuyenkhich.text = tmpData.lists;
-            giaikhuyenkhich.autotime = tmpData.autotime
-            giaikhuyenkhich.step = tmpData.step
-            giaikhuyenkhich.autostop = tmpData.autostop
-            giaikhuyenkhich.lists = tmpData.lists
-            giaikhuyenkhich.listsTop50 = tmpData.listsTop50
-            giaikhuyenkhich.columns = tmpData.columns
+	$.ajax({
+		url: AppURL.giai_khuyenkhich + getParameterByName('ID'),
+		type: "GET",
+		dataType: "json",
+		cache: !0,
+		complete: function (data) {
+			var tmpData = data.responseJSON.data_giaikhuyenkhich;
+			giaikhuyenkhich.text = tmpData.lists;
+			giaikhuyenkhich.autotime = tmpData.autotime
+			giaikhuyenkhich.step = tmpData.step
+			giaikhuyenkhich.autostop = tmpData.autostop
+			giaikhuyenkhich.lists = tmpData.lists
+			giaikhuyenkhich.listsTop50 = tmpData.listsTop50
+			giaikhuyenkhich.columns = tmpData.columns
 			giaikhuyenkhich.imgs = tmpData.imgs
 			giaikhuyenkhich.columnTitle = tmpData.columnTitle.split(',')
 			giaikhuyenkhich.displayOnResult = tmpData.displayOnResult.toLowerCase().split(',')
 			giaikhuyenkhich.displayOnTable = tmpData.displayOnTable.toLowerCase().split(',')
 			giaikhuyenkhich.titleOnResult = tmpData.titleOnResult.split(',')
 			// updateUerWin(giaikhuyenkhich.lists)
-            getPerLoop(giaikhuyenkhich.lists, giaikhuyenkhich.step)
-            if (tmpData.bgimg) {
-                setTimeout(function () {
-                    $('body').css({
-                        "background-image": "url(" + tmpData.bgimg + ")"
-                    })
-                }, 200);
-            }
-            if (tmpData.demo) {
-                DemoMode()
-            }
-        }
-    })
+			getPerLoop(giaikhuyenkhich.lists, giaikhuyenkhich.step)
+			if (tmpData.bgimg) {
+				setTimeout(function () {
+					$('body').css({
+						"background-image": "url(" + tmpData.bgimg + ")"
+					})
+				}, 200);
+			}
+			if (tmpData.demo) {
+				DemoMode()
+			}
+		}
+	})
 }
 
 getData()
 
 
 function getPerLoop(a, b) {
-    var perList = Math.floor(parseInt(a.length) / parseInt(b)) // Kết quả chia hết
-    var perListCan = a.length - (perList * b) // Số dư
-    if (a.length % b == 0) {
-        for (var index = 0; index < b; index++) {
-            giaikhuyenkhich.newlists[index] = a.slice((index * perList), perList + (index * perList))
-        }
-    }
-    else {
-        for (var index = 0; index < b; index++) {
-            if (index < perListCan) {
-                for (var u = 0; u < perListCan; u++) {
-                    giaikhuyenkhich.newlists[u] = a.slice((u * perList) + u, perList + (u * perList) + (u + 1))
-                }
-            } else {
-                giaikhuyenkhich.newlists[index] = a.slice((index * perList) + 1, perList + (index * perList) + 1)
-            }
-        }
+	var perList = Math.floor(parseInt(a.length) / parseInt(b)) // Kết quả chia hết
+	var perListCan = a.length - (perList * b) // Số dư
+	if (a.length % b == 0) {
+		for (var index = 0; index < b; index++) {
+			giaikhuyenkhich.newlists[index] = a.slice((index * perList), perList + (index * perList))
+		}
+	} else {
+		for (var index = 0; index < b; index++) {
+			if (index < perListCan) {
+				for (var u = 0; u < perListCan; u++) {
+					giaikhuyenkhich.newlists[u] = a.slice((u * perList) + u, perList + (u * perList) + (u + 1))
+				}
+			} else {
+				giaikhuyenkhich.newlists[index] = a.slice((index * perList) + 1, perList + (index * perList) + 1)
+			}
+		}
 	}
-    $('.text-kienlong-per').html('Lần quay ' + giaikhuyenkhich.click + '/' + b + '')
+	$('.text-kienlong-per').html('Lần quay ' + giaikhuyenkhich.click + '/' + b + '')
 
 }
 
 
 function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
-    while (0 !== currentIndex) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-    }
-    return array;
+	var currentIndex = array.length,
+		temporaryValue, randomIndex;
+	while (0 !== currentIndex) {
+		randomIndex = Math.floor(Math.random() * currentIndex);
+		currentIndex -= 1;
+		temporaryValue = array[currentIndex];
+		array[currentIndex] = array[randomIndex];
+		array[randomIndex] = temporaryValue;
+	}
+	return array;
 }
 
 function sf() {
-    return shuffle(giaikhuyenkhich.chars.split(''))
+	return shuffle(giaikhuyenkhich.chars.split(''))
 }
 var interval;
 
 function getRandomKey() {
-    $('.timthay').show()
-    var a = giaikhuyenkhich.autostop
+	$('.timthay').show()
+	var a = giaikhuyenkhich.autostop
 	getTotalWin(a)
-    $('.text-kienlong-per').html('Lần quay ' + giaikhuyenkhich.click + '/' + giaikhuyenkhich.step + '')
-    document.title = "Đang tìm người may mắn..."
-    $('.stepbystep p').html('Đang quay số...')
-    $('#jackpot').get(0).play();
-    var k = document.getElementById('getnum');
-    var m = document.getElementById('getnumautosop');
+	$('.text-kienlong-per').html('Lần quay ' + giaikhuyenkhich.click + '/' + giaikhuyenkhich.step + '')
+	document.title = "Đang tìm người may mắn..."
+	$('.stepbystep p').html('Đang quay số...')
+	$('#jackpot').get(0).play();
+	var k = document.getElementById('getnum');
+	var m = document.getElementById('getnumautosop');
 	forList(giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1])
 
 	// if(giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1].length <= 10) {
@@ -139,207 +138,233 @@ function getRandomKey() {
 		"animation-duration": (((giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1].length * 2 * giaikhuyenkhich.columns) * giaikhuyenkhich.animation) / 100) + "s"
 	})
 
-    if (a) {
-        var timeper = giaikhuyenkhich.autotime / 1000
-        var timeleftPer = giaikhuyenkhich.press;
-        countDown()
-        m.setAttribute("disabled", "disabled");
-        var downloadTimerPer = setInterval(function () {
+	if (a) {
+		var timeper = giaikhuyenkhich.autotime / 1000
+		var timeleftPer = giaikhuyenkhich.press;
+		countDown()
+		m.setAttribute("disabled", "disabled");
+		var downloadTimerPer = setInterval(function () {
 			stopKey()
+				--timeleftPer
+			if (timeleftPer <= 0) {
+				clearInterval(downloadTimerPer);
+			} else {
+				countDown()
+			}
+		}, giaikhuyenkhich.autotime);
 
-            --timeleftPer
-            if (timeleftPer <= 0) {
-                clearInterval(downloadTimerPer);
-            } else {
-                countDown()
-            }
-        }, giaikhuyenkhich.autotime);
-
-    } else {
-        $('#getnum').hide();
-        $('#getnumautosop').hide();
-        $('.loading').show();
-        $('#stopnum').show();
-    }
+	} else {
+		$('#getnum').hide();
+		$('#getnumautosop').hide();
+		$('.loading').show();
+		$('#stopnum').show();
+	}
 }
 
 function getKey(a) {
-    $('#wheels .boxnone').html()
-    forList(giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1])
+	$('#wheels .boxnone').html()
+	forList(giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1])
 }
 
 function countDown() {
-    var timeleftKey = giaikhuyenkhich.autotime / 1000;
-    var m = document.getElementById('getnumautosop');
-    m.innerHTML = "Đang quay";
-    // m.innerHTML = "Đang quay - (" + timeleftKey + ")";
-    var downloadTimerHey = setInterval(function () {
-        timeleftKey = timeleftKey - 1;
-        if (timeleftKey < 0) {
-            clearInterval(downloadTimerHey);
-            return;
-        }
-        document.title = "(" + timeleftKey + ") - Đang tìm người may mắn..."
-        m.innerHTML = "Đang quay";
-        // m.innerHTML = "Đang quay - (" + timeleftKey + ")";
-    }, 1000);
+	var timeleftKey = giaikhuyenkhich.autotime / 1000;
+	var m = document.getElementById('getnumautosop');
+	m.innerHTML = "Đang quay";
+	// m.innerHTML = "Đang quay - (" + timeleftKey + ")";
+	var downloadTimerHey = setInterval(function () {
+		timeleftKey = timeleftKey - 1;
+		if (timeleftKey < 0) {
+			clearInterval(downloadTimerHey);
+			return;
+		}
+		document.title = "(" + timeleftKey + ") - Đang tìm người may mắn..."
+		m.innerHTML = "Đang quay";
+		// m.innerHTML = "Đang quay - (" + timeleftKey + ")";
+	}, 1000);
 }
 
 
 function stopKeyEnd() {
 
-    $('#jackpot').get(0).pause();
-    $('.loading').hide()
-    $(".boxnone").animate({ scrollTop: 0 }, 0);
-    setTimeout(function () {
-        $('body').addClass('phaono')
-        $('#congrats').show()
-        document.title = "✨🌟 Xin chúc mừng! 🌟✨"
-        fancyPopIn();
-        $('#buzzer').get(0).play();
-    }, 300);
-    setTimeout(function () {
-        if ((giaikhuyenkhich.click - 1) < giaikhuyenkhich.step) {
-            $('#getnumautosop').removeAttr("disabled").html('Quay số');
+	$('#jackpot').get(0).pause();
+	$('.loading').hide()
+	$(".boxnone").animate({
+		scrollTop: 0
+	}, 0);
+	setTimeout(function () {
+		$('body').addClass('phaono')
+		$('#congrats').show()
+		document.title = "✨🌟 Xin chúc mừng! 🌟✨"
+		fancyPopIn();
+		$('#buzzer').get(0).play();
+	}, 300);
+	setTimeout(function () {
+		if ((giaikhuyenkhich.click - 1) < giaikhuyenkhich.step) {
+			$('#getnumautosop').removeAttr("disabled").html('Quay số');
 
-            // $('#getnumautosop').removeAttr("disabled").html('Đợt quay thứ ' + giaikhuyenkhich.click);
-            $('#getnumautosop').show()
-        } else {
-            $('#ketqua').show()
-            // updateUerWin(giaikhuyenkhich.lists)
-            $('.timthay').html('Tìm thấy tổng cộng ' + giaikhuyenkhich.text.length + ' người may mắn')
-        }
-        $('body').removeClass('phaono')
-    }, 2000);
+			// $('#getnumautosop').removeAttr("disabled").html('Đợt quay thứ ' + giaikhuyenkhich.click);
+			$('#getnumautosop').show()
+		} else {
+			$('#ketqua').show()
+			// updateUerWin(giaikhuyenkhich.lists)
+			$('.timthay').html('Tìm thấy tổng cộng ' + giaikhuyenkhich.text.length + ' người may mắn')
+		}
+		$('body').removeClass('phaono')
+	}, 2000);
 }
 
 
 function stopKey() {
 	updateUerWin(giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1])
-    // $('.timthay').hide()
-    $('#pot').get(0).play();
-    $('#wheels .boxnone').removeClass('animated')
-    $('.wheels').addClass('showlist')
-    $('#wheels .boxnone').addClass('showlist')
-    giaikhuyenkhich.click++
-    setTimeout(function () {
-        $('#pot').get(0).pause();
-    }, 1000);
+	// $('.timthay').hide()
+	forListOK(giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1])
+	$('#wheels .boxnone .wheel').attr('columns', giaikhuyenkhich.columns)
 
-    if ((giaikhuyenkhich.click - 1) <= giaikhuyenkhich.step) {
-        stopKeyEnd()
-        $('#stopnum').hide()
-        return false
-    }
+	$('#pot').get(0).play();
+	$('#wheels .boxnone').removeClass('animated')
+	$('.wheels').addClass('showlist')
+	$('#wheels .boxnone').addClass('showlist')
+	giaikhuyenkhich.click++
+		setTimeout(function () {
+			$('#pot').get(0).pause();
+		}, 1000);
+
+	if ((giaikhuyenkhich.click - 1) <= giaikhuyenkhich.step) {
+		stopKeyEnd()
+		$('#stopnum').hide()
+		return false
+	}
 }
 
 function showList() {
-    $('#showlist').after("<p class='mb-0 h4'>Kết quả quay số đã được lưu vào cơ sở dữ liệu.</p>")
-    $('#showlist').remove()
+	$('#showlist').after("<p class='mb-0 h4'>Kết quả quay số đã được lưu vào cơ sở dữ liệu.</p>")
+	$('#showlist').remove()
 }
 
 function getTotalWin(a) {
-    $('#stopnum').css({
-        "cursor": "wait",
-        "pointer-events": "none",
-        "opacity": ".5"
-    });
+	$('#stopnum').css({
+		"cursor": "wait",
+		"pointer-events": "none",
+		"opacity": ".5"
+	});
 
-    $('#stopnum').html("Đang quay...")
-    $('.counter').each(function () {
-        var $this = $(this),
-            countTo = giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1].length;
-        $({ countNum: 0 }).animate({
-            countNum: countTo
-        },
-            {
-                duration: giaikhuyenkhich.autotime,
-                easing: 'linear',
-                step: function () {
-                    $this.text(Math.floor(this.countNum));
-                },
-                complete: function () {
-                    $this.text(this.countNum);
-                    $('#stopnum').css({
-                        "cursor": "pointer",
-                        "pointer-events": "initial",
-                        "opacity": "1"
-                    });;
-                    $('#stopnum').html("Dừng quay")
-                }
-            });
-    });
-    if (a) {
-        setTimeout(function () {
-            $('#getnumautosop').hide()
-        }, ((giaikhuyenkhich.autotime * giaikhuyenkhich.press)));
+	$('#stopnum').html("Đang quay...")
+	$('.counter').each(function () {
+		var $this = $(this),
+			countTo = giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1].length;
+		$({
+			countNum: 0
+		}).animate({
+			countNum: countTo
+		}, {
+			duration: giaikhuyenkhich.autotime,
+			easing: 'linear',
+			step: function () {
+				$this.text(Math.floor(this.countNum));
+			},
+			complete: function () {
+				$this.text(this.countNum);
+				$('#stopnum').css({
+					"cursor": "pointer",
+					"pointer-events": "initial",
+					"opacity": "1"
+				});;
+				$('#stopnum').html("Dừng quay")
+			}
+		});
+	});
+	if (a) {
+		setTimeout(function () {
+			$('#getnumautosop').hide()
+		}, ((giaikhuyenkhich.autotime * giaikhuyenkhich.press)));
 	} else {
 		setTimeout(function () {
 			$('#stopnum').css({
 				"cursor": "pointer",
-                        "pointer-events": "initial",
-                        "opacity": "1"
+				"pointer-events": "initial",
+				"opacity": "1"
 			}).removeAttr("disabled");
 			$('#stopnum').html("Dừng quay")
-        }, giaikhuyenkhich.autotime);
+		}, giaikhuyenkhich.autotime);
 	}
 }
 
-function forList(a) {
-    $('.boxnonehome').remove()
-    var lists = []
-    var reli = giaikhuyenkhich.listsTop50
-    for (var index = 0; index < reli.length; index++) {
+function forListOK(a) {
+	$('.boxnonehome').remove()
+	var lists = []
+	var reli = a
+	for (var index = 0; index < reli.length; index++) {
 		var item = reli[index].split(';')
 
 
 		var listR = ''
 		for (var op = 0; op < (giaikhuyenkhich.columnTitle.length - 4); op++) {
-			if(giaikhuyenkhich.displayOnResult[op+4] === 'true') {
-				listR += '<p>' + giaikhuyenkhich.titleOnResult[op+4] + item[op+4] + '</p>'
+			if (giaikhuyenkhich.displayOnResult[op + 4] === 'true') {
+				listR += '<p>' + giaikhuyenkhich.titleOnResult[op + 4] + item[op + 4] + '</p>'
 			}
 		}
 
 		lists.push('<div class="wheel"><div class="item"><h2><span>' + (index + 1) + '.</span>' + item[3] + '</h2>' + listR + '</div></div>')
 
 	}
-    return $('#wheels .boxnone').html(lists)
+	return $('#wheels .boxnone').html(lists)
+}
+
+function forList(a) {
+	$('.boxnonehome').remove()
+	var lists = []
+	var reli = giaikhuyenkhich.listsTop50
+	for (var index = 0; index < reli.length; index++) {
+		var item = reli[index].split(';')
+
+
+		var listR = ''
+		for (var op = 0; op < (giaikhuyenkhich.columnTitle.length - 4); op++) {
+			if (giaikhuyenkhich.displayOnResult[op + 4] === 'true') {
+				listR += '<p>' + giaikhuyenkhich.titleOnResult[op + 4] + item[op + 4] + '</p>'
+			}
+		}
+
+		lists.push('<div class="wheel"><div class="item"><h2><span>' + (index + 1) + '.</span>' + item[3] + '</h2>' + listR + '</div></div>')
+
+	}
+	return $('#wheels .boxnone').html(lists)
 }
 
 function buildHeader() {
 	buildListHeader.push('<th scope="col">STT</th>')
 	for (var index = 0; index < (giaikhuyenkhich.columnTitle.length - 3); index++) {
-		if(giaikhuyenkhich.displayOnTable[index+3] === 'true') {
-			buildListHeader.push('<th scope="col">' + giaikhuyenkhich.columnTitle[index+3] + '</th>')
+		if (giaikhuyenkhich.displayOnTable[index + 3] === 'true') {
+			buildListHeader.push('<th scope="col">' + giaikhuyenkhich.columnTitle[index + 3] + '</th>')
 		}
 	}
 }
 
 function doSearch() {
-    var tmpData = giaikhuyenkhich.text;
-    var buildList = []
-    for (var index = 0; index < tmpData.length; index++) {
+	var tmpData = giaikhuyenkhich.text;
+	var buildList = []
+	for (var index = 0; index < tmpData.length; index++) {
 		var newnoneList = []
 		newnoneList.push('<td>' + (index + 1) + '</td>')
 		for (var tem = 0; tem < (giaikhuyenkhich.columnTitle.length - 3); tem++) {
-			if(giaikhuyenkhich.displayOnTable[tem+3] === 'true') {
-				newnoneList.push('<td>' + tmpData[index].split(';')[tem+3] + '</td>')
+			if (giaikhuyenkhich.displayOnTable[tem + 3] === 'true') {
+				newnoneList.push('<td>' + tmpData[index].split(';')[tem + 3] + '</td>')
 			}
 		}
 		var newlist = '<tr>' + newnoneList + '<tr>';
 
-        buildList.push(newlist)
+		buildList.push(newlist)
 	}
 	$('.table-kienlong thead tr').html(buildListHeader)
-    $('.table-kienlong tbody').html(buildList)
-    $('.resultbox').show()
-    $('.getloading').hide()
+	$('.table-kienlong tbody').html(buildList)
+	$('.resultbox').show()
+	$('.getloading').hide()
 }
 
 
 function ketqua() {
-    $('.wheels, .text-kienlong, .boxnone').hide()
+	$('.wheels, .text-kienlong, .boxnone').hide()
 	$('.getloading').show()
 	buildHeader()
-    doSearch()
+	doSearch()
 }

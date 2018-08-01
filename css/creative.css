@@ -760,7 +760,7 @@ audio {
 }
 
 #giaikhuyenkhich .wheels #wheels .boxnone.showlist {
-  overflow: scroll;
+  overflow: auto;
   max-height: calc(230px - 2rem);
   height: auto;
   padding: 1rem;
@@ -842,7 +842,7 @@ audio {
 
 .boxkienlong .itemkl:last-child .li {
   max-height: 320px;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .boxkienlong .itemkl h3 {

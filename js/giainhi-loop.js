@@ -84,9 +84,18 @@ function getData() {
 			giainhi.columnTitle = tmpData.columnTitle.split(',')
 			giainhi.displayOnResult = tmpData.displayOnResult.toLowerCase().split(',')
 			giainhi.displayOnTable = tmpData.displayOnTable.toLowerCase().split(',')
-			giainhi.titleOnResult = tmpData.titleOnResult.toLowerCase().split(',')
-            if (giainhi.passed === 'true') {
-                giainhi.click++
+			giainhi.titleOnResult = tmpData.titleOnResult.toLowerCase().split(',');
+
+			var em = -1
+			for (var index = 0; index < tmpData.lists.length; index++) {
+				if(tmpData.lists[index].split(';')[2] === 'true'){
+					em = index
+				}
+			};
+
+            if (em > -1) {
+				giainhi.click = em+2
+                // giainhi.click++
                 $('#getnumautosop').removeAttr("disabled").html('Quay số');
                 // $('#getnumautosop').removeAttr("disabled").html('Người may mắn thứ ' + giainhi.click);
                 $('.text-kienlong').html('Lần quay ' + (giainhi.click-1) + '/' + tmpData.lists.length + '')

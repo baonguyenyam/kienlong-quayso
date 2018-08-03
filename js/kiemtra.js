@@ -65,6 +65,10 @@ function buildHeader() {
 	}
 }
 
+function goback() {
+	window.location = "./kiemtra.html";
+}
+
 
 function buildLists(a) {
     $('.boxnone').hide()

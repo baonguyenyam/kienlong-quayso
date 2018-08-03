@@ -88,6 +88,23 @@ function getPerLoop(a, b) {
 			}
 		}
 	}
+	var lop = -1
+	for (var mn = 0; mn < giaikhuyenkhich.newlists.length; mn++) {
+		if(giaikhuyenkhich.newlists[mn][0].split(';')[2] === 'true') {
+			lop = mn
+		}
+	}
+	if (lop > -1) {
+		giaikhuyenkhich.click = lop+2
+		stopKeyEnd()
+		forListOK(giaikhuyenkhich.newlists[lop])
+		$('#wheels .boxnone .wheel').attr('columns', giaikhuyenkhich.columns)
+		$('#wheels .boxnone').addClass('showlist')
+	}
+	if(giaikhuyenkhich.click > b) {
+		ketqua()
+	}
+	console.log(giaikhuyenkhich.click)
 	$('.text-kienlong-per').html('Lần quay ' + giaikhuyenkhich.click + '/' + b + '')
 
 }

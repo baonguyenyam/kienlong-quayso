@@ -184,3 +184,12 @@ function b64DecodeUnicode(str) {
 		return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
 	}).join(''));
 }
+
+
+
+// $(document).ready(function () {
+// 	setTimeout(function() {
+// 		$('.mainlottery .row div.chucmung').append('<button type="button" class="btn btn-primary" onclick="window.location.href=\'./index.html\'">Về trang chủ</button>')
+// 		$('.mainlottery.adbtnnew, .mainbox').append('<div class="text-center mt-2"><button type="button" class="btn btn-primary" onclick="window.location.href=\'./index.html\'">Về trang chủ</button></div>')
+// 	}, 1000);
+// })

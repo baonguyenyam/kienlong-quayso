@@ -2,6 +2,7 @@ var datamain = {
     lists: []
 };
 
+
 function getData() {
     $.ajax({
         url: AppURL.main,

@@ -59,7 +59,7 @@ function buildHeader() {
 }
 
 function putData(e, w, g) {
-	buildListResults.push('<tr><td colspan="5" class="namegiai">'+g+'</td></tr>')
+	buildListResults.push('<tr><td colspan="'+(results.columnTitle.length - 2)+'" class="namegiai">'+g+'</td></tr>')
 	for (var index = 0; index < e.length; index++) {
 		var dat = e[index].split(';')
 		var newnoneList = []

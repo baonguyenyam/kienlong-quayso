@@ -4,6 +4,7 @@ var datamain = {
 
 
 function getData() {
+	$('#loading').removeClass('done').removeClass('finished')
     $.ajax({
         url: AppURL.main,
         type: "GET",
@@ -19,7 +20,13 @@ function getData() {
                         "background-image": "url(" + tmpData.bgimg + ")"
                     })
                 }, 200);
-            }
+			}
+			setTimeout(function() {
+                $('#loading').addClass('done')
+            }, 200);
+            setTimeout(function() {
+                $('#loading').removeClass('done').addClass('finished')
+            }, 1000);
         }
     })
 }

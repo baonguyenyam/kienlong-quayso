@@ -1,6 +1,7 @@
 
 
 function getData() {
+    $('#loading').removeClass('done').removeClass('finished')
     $.ajax({
         url: AppURL.index,
         type: "GET",
@@ -15,6 +16,12 @@ function getData() {
                     })
                 }, 200);
             }
+            setTimeout(function() {
+                $('#loading').addClass('done')
+            }, 200);
+            setTimeout(function() {
+                $('#loading').removeClass('done').addClass('finished')
+            }, 1000);
         }
     })
 }

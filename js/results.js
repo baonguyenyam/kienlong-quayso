@@ -6,7 +6,8 @@ var buildListHeader = []
 
 
 function getData() {
-    $.ajax({
+	$('#loading').removeClass('done').removeClass('finished')
+	$.ajax({
 		url: AppURL.results,
 		type: "GET",
         dataType: "json",
@@ -44,7 +45,13 @@ function getData() {
                 }, 200);
 			}
 			buildHeader()
-            getGiaiThuong()
+			getGiaiThuong()
+			setTimeout(function() {
+                $('#loading').addClass('done')
+            }, 200);
+            setTimeout(function() {
+                $('#loading').removeClass('done').addClass('finished')
+            }, 1000);
         }
     })
 }

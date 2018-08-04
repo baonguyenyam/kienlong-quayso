@@ -5,6 +5,7 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: 'Roboto', sans-serif;
+  position: relative;
 }
 
 html .phaono, body .phaono {
@@ -359,6 +360,41 @@ audio {
 
 .text-danger {
   color: #ed1c24 !important;
+}
+
+#loading {
+  background: #017476;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  transition: all 1s ease-in;
+  opacity: 1;
+}
+
+#loading.done {
+  z-index: -1;
+  opacity: 0;
+}
+
+#loading.finished {
+  z-index: -1;
+  opacity: 0;
+}
+
+#loading .bar {
+  margin-bottom: .5rem;
+}
+
+.progress {
+  min-width: 300px;
 }
 
 #index {

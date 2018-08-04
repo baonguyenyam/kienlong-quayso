@@ -59,6 +59,7 @@ function passed() {
 }
 
 function getData() {
+	$('#loading').removeClass('done').removeClass('finished')
 	$.ajax({
 		url: AppURL.giai_nhat + getParameterByName('ID'),
 		type: "GET",
@@ -91,6 +92,12 @@ function getData() {
 			if (tmpData.demo) {
 				DemoMode()
 			}
+			setTimeout(function() {
+                $('#loading').addClass('done')
+            }, 200);
+            setTimeout(function() {
+                $('#loading').removeClass('done').addClass('finished')
+            }, 1000);
 		}
 	})
 }

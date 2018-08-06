@@ -93,7 +93,7 @@ nav {
   text-shadow: 0px 1px 0px #015657;
 }
 
-.btn:hover, .btn:focus, .btn:active, .btn.active, .btn:disabled, .btn.disabled {
+.btn:hover, .btn:focus, .btn:active, .btn.active, .btn:disabled, .btn.disabled, .btn.btn-primary:not(:disabled):not(.disabled).active, .btn.btn-primary:not(:disabled):not(.disabled):active {
   color: white;
   position: relative;
   -moz-box-shadow: inset 0px 1px 3px 0px #8bffff, inset 0px -1px 3px 0px #045152;
@@ -118,6 +118,10 @@ nav {
   padding: 6px 24px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #015657;
+}
+
+.btn:hover {
+  opacity: .8 !important;
 }
 
 .noted {
@@ -395,6 +399,35 @@ audio {
 
 .progress {
   min-width: 300px;
+}
+
+.table-fixed thead {
+  display: block;
+  width: 100%;
+}
+
+.table-fixed tbody {
+  width: 100%;
+  display: block;
+  max-height: 300px;
+  overflow: auto;
+}
+
+.table-fixed thead tr, .table-fixed tbody tr {
+  display: table;
+  width: 100%;
+}
+
+.table-fixed thead tr th, .table-fixed thead tr td, .table-fixed tbody tr th, .table-fixed tbody tr td {
+  width: 18.8%;
+}
+
+.table-fixed thead tr th:nth-child(1), .table-fixed thead tr td:nth-child(1), .table-fixed tbody tr th:nth-child(1), .table-fixed tbody tr td:nth-child(1) {
+  width: 6%;
+}
+
+.table-fixed thead tr th:nth-child(2), .table-fixed thead tr th:nth-child(6), .table-fixed thead tr td:nth-child(2), .table-fixed thead tr td:nth-child(6), .table-fixed tbody tr th:nth-child(2), .table-fixed tbody tr th:nth-child(6), .table-fixed tbody tr td:nth-child(2), .table-fixed tbody tr td:nth-child(6) {
+  text-align: left;
 }
 
 #index {
@@ -759,9 +792,6 @@ audio {
   font-size: 1.1rem;
   margin-bottom: 0;
   text-transform: uppercase;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 
 #giaikhuyenkhich .wheels #wheels .boxnone .wheel h2 span {
@@ -776,12 +806,6 @@ audio {
 }
 
 #giaikhuyenkhich .wheels #wheels .boxnone .wheel .item p {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-#giaikhuyenkhich .wheels #wheels .boxnone .wheel .item > p {
   margin-bottom: 0;
   color: #fff;
 }
@@ -814,20 +838,19 @@ audio {
   text-transform: uppercase;
   font-size: .8rem;
   font-weight: 200;
+  display: flex;
+}
+
+#giaikhuyenkhich .wheels #wheels .boxnone.showlist .wheel .item > span {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  padding-right: .5rem;
 }
 
 #giaikhuyenkhich .wheels #wheels .boxnone.showlist .wheel .item p {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-#giaikhuyenkhich .wheels #wheels .boxnone.showlist .wheel .item > p {
-  padding-left: 2rem;
-  color: #fff;
-}
-
-#giaikhuyenkhich .wheels #wheels .boxnone.showlist .wheel .item + p {
   color: #fff;
 }
 

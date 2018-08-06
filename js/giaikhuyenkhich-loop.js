@@ -159,7 +159,7 @@ function getRandomKey() {
 	// }
 	$('#wheels .boxnone .wheel').attr('columns', giaikhuyenkhich.columns)
 	$('#wheels .boxnone').removeClass('showlist').addClass('animated').css({
-		"animation-duration": (((giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1].length * 2 * giaikhuyenkhich.columns) * giaikhuyenkhich.animation) / 100) + "s"
+		"animation-duration": (((giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1].length * giaikhuyenkhich.columns) * giaikhuyenkhich.animation) / 100) + "s"
 	})
 
 	if (a) {
@@ -328,7 +328,7 @@ function forListOK(a) {
 			}
 		}
 
-		lists.push('<div class="wheel"><div class="item"><h2><span>' + (index + 1) + '.</span>' + item[3] + '</h2>' + listR + '</div></div>')
+		lists.push('<div class="wheel"><div class="item"><span>' + (index + 1) + '.</span><div class="thongtin"><h2>' + item[3] + '</h2>' + listR + '</div></div></div>')
 
 	}
 	return $('#wheels .boxnone').html(lists)

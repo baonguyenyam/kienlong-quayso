@@ -1,5 +1,5 @@
-// var FULL_URL = '/api/'
-var FULL_URL = 'http://preview6455.canhcam.com.vn/api/'
+var FULL_URL = '/api/'
+// var FULL_URL = 'http://preview6455.canhcam.com.vn/api/'
 var AppURL = {
 	giai_dacbiet: FULL_URL + 'AwardService.aspx?method=data_',
 	giai_dacbiet_update: FULL_URL + 'AwardService.aspx?p=',

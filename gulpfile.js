@@ -123,6 +123,7 @@ gulp.task('js:app', function () {
     'vendor/jquery/jquery.min.js',
     'vendor/TweenMax.min.js',
     'vendor/underscore-min.js',
+	'vendor/jquery.scrollbar.min.js',
   ])
   .pipe(concat('app.js'))
   .pipe(uglify())
@@ -138,7 +139,7 @@ gulp.task('js:concat', function () {
     'vendor/bootstrap/js/bootstrap.bundle.min.js',
     'vendor/jquery-easing/jquery.easing.min.js',
     'vendor/offline/offline.min.js',
-    'vendor/kAnimation.min.js',
+	'vendor/kAnimation.min.js',
     './js/congrat.js',
     './js/creative.js',
 

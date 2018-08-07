@@ -111,7 +111,6 @@ function getPerLoop(a, b) {
 	if(giaikhuyenkhich.click > b) {
 		ketqua()
 	}
-	console.log(giaikhuyenkhich.click)
 	$('.text-kienlong-per').html('Lần quay ' + giaikhuyenkhich.click + '/' + b + '')
 
 }
@@ -159,7 +158,7 @@ function getRandomKey() {
 	// }
 	$('#wheels .boxnone .wheel').attr('columns', giaikhuyenkhich.columns)
 	$('#wheels .boxnone').removeClass('showlist').addClass('animated').css({
-		"animation-duration": (((giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1].length * giaikhuyenkhich.columns)) / 1000) + "s"
+		"animation-duration": parseFloat((50 * giaikhuyenkhich.columns) / 1000).toFixed(3) + "s"
 	})
 
 	if (a) {

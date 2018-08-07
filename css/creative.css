@@ -343,11 +343,6 @@ audio {
   text-align: left;
 }
 
-.resultbox {
-  max-height: 385px;
-  overflow: auto;
-}
-
 .resultbox .table {
   margin-bottom: 0;
 }
@@ -401,9 +396,22 @@ audio {
   min-width: 300px;
 }
 
+.table-fixed {
+  position: relative;
+}
+
+.table-fixed .scroll-wrapper {
+  max-height: 380px;
+  margin-top: 50px;
+}
+
 .table-fixed thead {
   display: block;
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
 }
 
 .table-fixed tbody {

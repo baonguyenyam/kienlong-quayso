@@ -185,6 +185,9 @@ function b64DecodeUnicode(str) {
 	}).join(''));
 }
 
+jQuery(document).ready(function(){
+    jQuery('.table-fixed tbody').addClass('scrollbar-inner').scrollbar();
+});
 
 
 // $(document).ready(function () {

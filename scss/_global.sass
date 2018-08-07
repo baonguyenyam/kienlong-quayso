@@ -296,8 +296,8 @@ audio
 					background: #fff
 					text-align: left
 .resultbox
-	max-height: 385px
-	overflow: auto
+	// max-height: 385px
+	// overflow: auto
 	// border-bottom: 1px solid #fff
 	.table
 		margin-bottom: 0
@@ -336,9 +336,17 @@ audio
 .progress
 	min-width: 300px
 .table-fixed
+	position: relative
+	.scroll-wrapper
+		max-height: 380px
+		margin-top: 50px
 	thead
 		display: block
 		width: 100%
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 9999
 	tbody
 		width: 100%
 		display: block

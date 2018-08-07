@@ -99,12 +99,16 @@ function getData() {
                 // giainhi.click++
                 $('#getnumautosop').removeAttr("disabled").html('Quay số');
                 // $('#getnumautosop').removeAttr("disabled").html('Người may mắn thứ ' + giainhi.click);
-                $('.text-kienlong').html('Lần quay ' + (giainhi.click-1) + '/' + tmpData.lists.length + '')
-                victoryStep()
-                passed()
+				$('.text-kienlong').html('Lần quay ' + (giainhi.click-1) + '/' + tmpData.lists.length + '')
+				if(giainhi.click > tmpData.lists.length) {
+					ketqua()
+				} else {
+					victoryStep()
+					passed()
+				}
             } else {
                 $('.text-kienlong').html('Lần quay ' + giainhi.click + '/' + tmpData.lists.length + '')
-            }
+			}
             if (tmpData.bgimg) {
                 setTimeout(function () {
                     $('body').css({

@@ -159,7 +159,7 @@ function getRandomKey() {
 	// }
 	$('#wheels .boxnone .wheel').attr('columns', giaikhuyenkhich.columns)
 	$('#wheels .boxnone').removeClass('showlist').addClass('animated').css({
-		"animation-duration": (((giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1].length * giaikhuyenkhich.columns) * giaikhuyenkhich.animation) / 100) + "s"
+		"animation-duration": (((giaikhuyenkhich.newlists[giaikhuyenkhich.click - 1].length * giaikhuyenkhich.columns)) / 1000) + "s"
 	})
 
 	if (a) {

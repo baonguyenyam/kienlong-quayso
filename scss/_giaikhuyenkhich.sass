@@ -69,13 +69,15 @@
 						flex: 0 0 16.66666%
 						max-width: 16.66666%
 					h2
-						color: rgb(255, 248, 66)
+						// color: rgb(255, 248, 66)
 						font-size: 1.1rem
 						margin-bottom: 0
 						text-transform: uppercase
 						// white-space: nowrap
 						// text-overflow: ellipsis
 						// overflow: hidden
+						color: transparent
+						text-shadow: 0 0 5px rgb(255, 248, 66)
 						span
 							color: #fff
 							width: 2rem
@@ -88,9 +90,11 @@
 							// text-overflow: ellipsis
 							// overflow: hidden
 							margin-bottom: 0
-							color: #fff
+							color: transparent
+							text-shadow: 0 0 5px #fff
 						+ p
-							color: #fff
+							color: transparent
+							text-shadow: 0 0 5px #fff
 							margin-bottom: 1rem
 						p:last-child
 							margin-bottom: 1rem
@@ -102,6 +106,7 @@
 					.wheel
 						h2
 							color: rgb(255, 248, 66)
+							text-shadow: none
 							span
 								display: inline-block
 						.item
@@ -121,6 +126,7 @@
 								// text-overflow: ellipsis
 								// overflow: hidden
 								color: #fff
+								text-shadow: none
 							p:last-child
 								margin-bottom: 1rem
 

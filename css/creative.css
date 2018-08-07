@@ -336,6 +336,7 @@ audio {
   border: 2px solid #fff;
   text-align: center;
   padding: .25rem .5rem;
+  border-top: 0;
 }
 
 .table-kienlong tbody tr td.namegiai {
@@ -398,6 +399,7 @@ audio {
 
 .table-fixed {
   position: relative;
+  border: 0 solid #fff;
 }
 
 .table-fixed .scroll-wrapper {
@@ -796,10 +798,11 @@ audio {
 }
 
 #giaikhuyenkhich .wheels #wheels .boxnone .wheel h2 {
-  color: #fff842;
   font-size: 1.1rem;
   margin-bottom: 0;
   text-transform: uppercase;
+  color: transparent;
+  text-shadow: 0 0 5px #fff842;
 }
 
 #giaikhuyenkhich .wheels #wheels .boxnone .wheel h2 span {
@@ -815,11 +818,13 @@ audio {
 
 #giaikhuyenkhich .wheels #wheels .boxnone .wheel .item p {
   margin-bottom: 0;
-  color: #fff;
+  color: transparent;
+  text-shadow: 0 0 5px #fff;
 }
 
 #giaikhuyenkhich .wheels #wheels .boxnone .wheel .item + p {
-  color: #fff;
+  color: transparent;
+  text-shadow: 0 0 5px #fff;
   margin-bottom: 1rem;
 }
 
@@ -836,6 +841,7 @@ audio {
 
 #giaikhuyenkhich .wheels #wheels .boxnone.showlist .wheel h2 {
   color: #fff842;
+  text-shadow: none;
 }
 
 #giaikhuyenkhich .wheels #wheels .boxnone.showlist .wheel h2 span {
@@ -860,6 +866,7 @@ audio {
 
 #giaikhuyenkhich .wheels #wheels .boxnone.showlist .wheel .item p {
   color: #fff;
+  text-shadow: none;
 }
 
 #giaikhuyenkhich .wheels #wheels .boxnone.showlist .wheel .item p:last-child {

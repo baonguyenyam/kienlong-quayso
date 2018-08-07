@@ -106,24 +106,24 @@
 .scrollbar-inner > .scroll-element .scroll-element_outer,
 .scrollbar-inner > .scroll-element .scroll-element_track,
 .scrollbar-inner > .scroll-element .scroll-bar {
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
 }
 
 .scrollbar-inner > .scroll-element .scroll-element_track,
 .scrollbar-inner > .scroll-element .scroll-bar {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+  /* -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
   filter: alpha(opacity=40);
-  opacity: 0.4;
+  opacity: 0.4; */
 }
 
 .scrollbar-inner > .scroll-element .scroll-element_track {
-  background-color: #e0e0e0;
+  background-color: #017476;
 }
 
 .scrollbar-inner > .scroll-element .scroll-bar {
-  background-color: #c2c2c2;
+  background-color: #ed1a25
 }
 
 .scrollbar-inner > .scroll-element:hover .scroll-bar {

@@ -801,6 +801,7 @@ audio {
   font-size: 1.1rem;
   margin-bottom: 0;
   text-transform: uppercase;
+  display: none;
   color: transparent;
   text-shadow: 0 0 5px #fff842;
 }
@@ -812,7 +813,7 @@ audio {
 }
 
 #giaikhuyenkhich .wheels #wheels .boxnone .wheel .item {
-  font-size: .8rem;
+  font-size: 1.2rem;
   overflow: hidden;
 }
 
@@ -820,6 +821,10 @@ audio {
   margin-bottom: 0;
   color: transparent;
   text-shadow: 0 0 5px #fff;
+}
+
+#giaikhuyenkhich .wheels #wheels .boxnone .wheel .item p + p {
+  display: none;
 }
 
 #giaikhuyenkhich .wheels #wheels .boxnone .wheel .item + p {
@@ -842,6 +847,7 @@ audio {
 #giaikhuyenkhich .wheels #wheels .boxnone.showlist .wheel h2 {
   color: #fff842;
   text-shadow: none;
+  display: block;
 }
 
 #giaikhuyenkhich .wheels #wheels .boxnone.showlist .wheel h2 span {
@@ -850,7 +856,7 @@ audio {
 
 #giaikhuyenkhich .wheels #wheels .boxnone.showlist .wheel .item {
   text-transform: uppercase;
-  font-size: .8rem;
+  font-size: 1.2rem;
   font-weight: 200;
   display: flex;
 }
@@ -867,6 +873,10 @@ audio {
 #giaikhuyenkhich .wheels #wheels .boxnone.showlist .wheel .item p {
   color: #fff;
   text-shadow: none;
+}
+
+#giaikhuyenkhich .wheels #wheels .boxnone.showlist .wheel .item p + p {
+  display: block;
 }
 
 #giaikhuyenkhich .wheels #wheels .boxnone.showlist .wheel .item p:last-child {

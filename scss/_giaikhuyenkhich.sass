@@ -76,6 +76,7 @@
 						// white-space: nowrap
 						// text-overflow: ellipsis
 						// overflow: hidden
+						display: none
 						color: transparent
 						text-shadow: 0 0 5px rgb(255, 248, 66)
 						span
@@ -83,7 +84,7 @@
 							width: 2rem
 							display: none
 					.item
-						font-size: .8rem
+						font-size: 1.2rem
 						overflow: hidden
 						p
 							// white-space: nowrap
@@ -92,6 +93,8 @@
 							margin-bottom: 0
 							color: transparent
 							text-shadow: 0 0 5px #fff
+							+ p
+								display: none
 						+ p
 							color: transparent
 							text-shadow: 0 0 5px #fff
@@ -107,11 +110,12 @@
 						h2
 							color: rgb(255, 248, 66)
 							text-shadow: none
+							display: block
 							span
 								display: inline-block
 						.item
 							text-transform: uppercase
-							font-size: .8rem
+							font-size: 1.2rem
 							font-weight: 200
 							display: flex
 							> span
@@ -127,6 +131,8 @@
 								// overflow: hidden
 								color: #fff
 								text-shadow: none
+								+ p
+									display: block
 							p:last-child
 								margin-bottom: 1rem
 

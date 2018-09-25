@@ -436,10 +436,6 @@ audio {
   width: 6%;
 }
 
-.table-fixed thead tr th:nth-child(2), .table-fixed thead tr th:nth-child(6), .table-fixed thead tr th:last-child, .table-fixed thead tr td:nth-child(2), .table-fixed thead tr td:nth-child(6), .table-fixed thead tr td:last-child, .table-fixed tbody tr th:nth-child(2), .table-fixed tbody tr th:nth-child(6), .table-fixed tbody tr th:last-child, .table-fixed tbody tr td:nth-child(2), .table-fixed tbody tr td:nth-child(6), .table-fixed tbody tr td:last-child {
-  text-align: left;
-}
-
 #index {
   background: url(../img/welcome.jpg) center center no-repeat;
   background-size: cover;

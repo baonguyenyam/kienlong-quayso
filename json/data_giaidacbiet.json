@@ -7,7 +7,11 @@
     "imgs": "./img/xe.png",
     "press": 3,
     "autostop": true,
-    "autotime": 6000,
-    "demo": false
+    "autotime": 1000,
+	"demo": false,
+	"columnTitle": "df,dsfsdf,dfdf,sfaf,ádasd",
+	"displayOnResult": "true,true,true,true,true",
+	"titleOnResult": "MSDT: ,MSDT: ,MSDT: ,MSDT: ,MSDT: "
+
     }
 }

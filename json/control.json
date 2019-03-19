@@ -1,6 +1,6 @@
 {
 	"data_searchresult": {
-		"lists": ["1;Gi?i d?c bi?t;1", "2;Gi?i nh?t;2", "16;Gi?i nhì;3", "17;Gi?i khuy?n khích;4"],
+		"lists": ["1;Giải đặc biệt;1", "2;Giải nhất;2", "16;Giải nhì;3", "17;Giải khuyến khích;4"],
 		"settings": "PrizeStructureID,Name,LoaiMH",
 		"ltr": false,
         "bgimg": "./img/ketqua-none.png",

@@ -34,7 +34,7 @@ function updateUerWin(e) {
 function getData() {
 	$('#loading').removeClass('done').removeClass('finished')
 	$.ajax({
-		url: AppURL.giai_khuyenkhich + getParameterByName('ID'),
+		url: AppURL.giai_khuyenkhich,
 		type: "GET",
 		dataType: "json",
 		cache: !0,

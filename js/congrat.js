@@ -1,8 +1,8 @@
 
+
 var particles = ['.blob', '.star'],
     $congratsSection = $('#congrats'),
     $title = $('#title');
-
 init({
     numberOfStars: 100,
     numberOfBlobs: 100

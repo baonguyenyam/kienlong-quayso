@@ -4,13 +4,13 @@ var giaidacbiet = {
     lists: [],
     lastkey: '',
     click: 1,
-    animation: 3.5
+	animation: 3.5,
 }
 
 
 function updateUerWin(e) {
     $.ajax({
-        url: AppURL.giai_dacbiet_update + e,
+        url: AppURL.giai_dacbiet_update,
         type: "GET",
         dataType: "json",
         cache: !0,
@@ -59,13 +59,15 @@ function passed() {
 function getData() {
 	$('#loading').removeClass('done').removeClass('finished')
     $.ajax({
-        url: AppURL.giai_dacbiet + getParameterByName('ID'),
+        url: AppURL.giai_dacbiet,
         type: "GET",
         dataType: "json",
         cache: !0,
         complete: function (data) {
+
             var tmpData = data.responseJSON.data_giaidacbiet;
-            giaidacbiet.text = tmpData.lists[0].split(';')[1];
+			console.log(tmpData.titleOnResult)
+			giaidacbiet.text = tmpData.lists[0].split(';')[1];
             giaidacbiet.passed = tmpData.lists[0].split(';')[2];
             giaidacbiet.Fulltext = tmpData.lists[0].split(';');
             giaidacbiet.ltr = tmpData.ltr

@@ -1,1 +1,147 @@
-<!DOCTYPE html><html class="no-js" dir="ltr" lang="en" itemscope itemtype="http://schema.org/WebSite" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="language" content="Vietnam"><meta name="distribution" content="Global"><meta name="robots" content="INDEX,FOLLOW"><meta name="country" content="Vietnam"><!-- Social: Favicon--><meta name="theme-color" content="#9a479a"><meta name="msapplication-navbutton-color" content="#9a479a"><meta name="apple-mobile-web-app-status-bar-style" content="#9a479a"><link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png"><link rel="manifest" href="favicon/manifest.json"><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png"><meta name="theme-color" content="#ffffff"><title>Kien Long Bank</title><!-- Bootstrap core CSS --><link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"><link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"><link href="vendor/odometer/themes/odometer-theme-minimal.css" rel="stylesheet" type="text/css"><link href="vendor/animate.min.css" rel="stylesheet" type="text/css"><link href="vendor/jquery.scrollbar.css" rel="stylesheet" type="text/css"><link href="css/creative.min.css" rel="stylesheet"></head><body id="giainhi"><div id="loading"><div class="bar">Đang tải dữ liệu...</div><div class="progress"><div class="progress-bar progress-bar-striped bg-secondary progress-bar-animated" role="progressbar" aria-valuenow="100" style="width: 100%" aria-valuemin="0" ariavaluemax="100"></div></div></div><div class="container mainlottery"><div class="row"><div class="col-12 mt-3"><h3 class="text-center text-kienlong text-uppercase mb-3"></h3><div id="lists" class="boxkienlong"><div class="lists"><div class="block" style="animation-delay:.5s"><div class="item">X</div></div></div><div class="lists"><div class="block" style="animation-delay:.3s"><div class="item">X</div></div></div><div class="lists"><div class="block" style="animation-delay:.2s"><div class="item">X</div></div></div><div class="lists"><div class="block" style="animation-delay:.1s"><div class="item">X</div></div></div><div class="lists"><div class="block" style="animation-delay:.6s"><div class="item">X</div></div></div><div class="lists"><div class="block" style="animation-delay:.3s"><div class="item">X</div></div></div></div><div class="row boxnone"><div class="col-12 mt-5"><div class="chucmung" style="display:none"><div class="text-center"><p class="cmkh">Chúc mừng khách hàng</p><h3 class="click"></h3><div class="looptext text-muted"></div></div></div><div class="quatang" style="display:none"><img src="" alt=""></div><div class="text-center"><button type="button" class="btn btn-primary" id="getnumautosop" onclick="getRandomKey()">Quay số</button> <button type="button" class="btn btn-primary" style="display:none" id="stopnum" onclick="stopKey()">Dừng quay</button> <button type="button" class="btn btn-primary" style="display:none" id="ketqua" onclick="ketqua()">Kết quả</button></div></div></div><div class="row"><div class="col-12 mt-3"><!-- <div class="loading" data-text="Đang tìm người may mắn...">Đang tìm người may mắn...</div> --></div></div><div id="congrats" style="display:none"><h1 id="title"></h1></div><div class="getloading" style="display:none"><div class="text-center"><img src="./img/loading.svg" alt=""><p>Đang tải...</p></div></div><h3 class="text-center text-danger text-uppercase resultbox border-0" style="display:none">Danh sách khách hàng trúng thưởng</h3><div class="resultbox" style="display:none"><table class="table table-bordered table-kienlong table-fixed"><thead><tr></tr></thead><tbody></tbody></table></div></div></div></div><audio id="buzzer"><source src="data/phaonoone.ogg" type="audio/ogg"><source src="data/phaonoone.mp3" type="audio/mpeg"></audio><audio id="jackpot" loop><source src="data/jackpotloop.ogg" type="audio/ogg"><source src="data/jackpotloop.mp3" type="audio/mpeg"></audio><audio id="pot"><source src="data/pot.ogg" type="audio/ogg"><source src="data/pot.mp3" type="audio/mpeg"></audio><!-- Bootstrap core JavaScript --><script src="js/app.min.js"></script><script src="js/canhcam.min.js"></script><script src="js/giainhi-loop.min.js"></script></body></html>
+<!DOCTYPE html>
+<html class="no-js" dir="ltr" lang="en" itemscope itemtype="http://schema.org/WebSite" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="language" content="Vietnam">
+  <meta name="distribution" content="Global">
+  <meta name="robots" content="INDEX,FOLLOW">
+  <meta name="country" content="Vietnam">
+  <!-- Social: Favicon-->
+  <meta name="theme-color" content="#9a479a">
+  <meta name="msapplication-navbutton-color" content="#9a479a">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#9a479a">
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Kien Long Bank</title>
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="vendor/odometer/themes/odometer-theme-minimal.css" rel="stylesheet" type="text/css">
+  <link href="vendor/animate.min.css" rel="stylesheet" type="text/css">
+  <link href="vendor/jquery.scrollbar.css" rel="stylesheet" type="text/css">
+  <link href="css/creative.min.css" rel="stylesheet">
+</head>
+
+<body id="giainhi">
+  <div id="loading">
+    <div class="bar">Đang tải dữ liệu...</div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-secondary progress-bar-animated" role="progressbar" aria-valuenow="100" style="width: 100%" aria-valuemin="0" ariavaluemax="100"></div>
+    </div>
+  </div>
+  <div class="container mainlottery">
+    <div class="row">
+      <div class="col-12 mt-3">
+        <h3 class="text-center text-kienlong text-uppercase mb-3"></h3>
+        <div id="lists" class="boxkienlong">
+          <div class="lists">
+            <div class="block" style="animation-delay:.5s">
+              <div class="item">X</div>
+            </div>
+          </div>
+          <div class="lists">
+            <div class="block" style="animation-delay:.3s">
+              <div class="item">X</div>
+            </div>
+          </div>
+          <div class="lists">
+            <div class="block" style="animation-delay:.2s">
+              <div class="item">X</div>
+            </div>
+          </div>
+          <div class="lists">
+            <div class="block" style="animation-delay:.1s">
+              <div class="item">X</div>
+            </div>
+          </div>
+          <div class="lists">
+            <div class="block" style="animation-delay:.6s">
+              <div class="item">X</div>
+            </div>
+          </div>
+          <div class="lists">
+            <div class="block" style="animation-delay:.3s">
+              <div class="item">X</div>
+            </div>
+          </div>
+        </div>
+        <div class="row boxnone">
+          <div class="col-12 mt-5">
+            <div class="chucmung" style="display:none">
+              <div class="text-center">
+                <p class="cmkh">Chúc mừng khách hàng</p>
+                <h3 class="click"></h3>
+                <div class="looptext text-muted"></div>
+              </div>
+            </div>
+            <div class="quatang" style="display:none">
+              <img src="" alt="">
+            </div>
+            <div class="text-center">
+              <button type="button" class="btn btn-primary" id="getnumautosop" onclick="getRandomKey()">Quay số</button>
+              <button type="button" class="btn btn-primary" style="display:none" id="stopnum" onclick="stopKey()">Dừng quay</button>
+              <button type="button" class="btn btn-primary" style="display:none" id="ketqua" onclick="ketqua()">Kết quả</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 mt-3">
+            <!-- <div class="loading" data-text="Đang tìm người may mắn...">Đang tìm người may mắn...</div> --></div>
+        </div>
+        <div id="congrats" style="display:none">
+          <h1 id="title"></h1>
+        </div>
+        <div class="getloading" style="display:none">
+          <div class="text-center">
+            <img src="./img/loading.svg" alt="">
+            <p>Đang tải...</p>
+          </div>
+        </div>
+        <h3 class="text-center text-danger text-uppercase resultbox border-0" style="display:none">Danh sách khách hàng trúng thưởng</h3>
+        <div class="resultbox" style="display:none">
+          <table class="table table-bordered table-kienlong table-fixed">
+            <thead>
+              <tr></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <audio id="buzzer">
+    <source src="data/phaonoone.ogg" type="audio/ogg">
+      <source src="data/phaonoone.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="jackpot" loop>
+    <source src="data/jackpotloop.ogg" type="audio/ogg">
+      <source src="data/jackpotloop.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="pot">
+    <source src="data/pot.ogg" type="audio/ogg">
+      <source src="data/pot.mp3" type="audio/mpeg">
+  </audio>
+  <!-- Bootstrap core JavaScript -->
+  <script src="js/app.min.js"></script>
+  <script src="js/canhcam.min.js"></script>
+  <script src="js/giainhi-loop.min.js"></script>
+</body>
+
+</html>
